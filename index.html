@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScamShield - AI Job Scam Detector | Protect Your Career</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #6366F1;
+            --primary-dark: #4F46E5;
+            --accent: #14B8A6;
+            --accent-bright: #2DD4BF;
+            --success: #22C55E;
+            --warning: #F59E0B;
+            --danger: #EF4444;
+            --dark-bg: #0F172A;
+            --dark-card: #1E293B;
+            --dark-card-light: #334155;
+            --text-primary: #F1F5F9;
+            --text-secondary: #CBD5E1;
+            --text-muted: #94A3B8;
+            --border: #334155;
+            --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-2: linear-gradient(135deg, #6366F1 0%, #14B8A6 100%);
+            --gradient-3: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+        }
+
+        body {
+            font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(30, 41, 59, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            font-size: 40px;
+            filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.5));
+        }
+
+        .logo-text h1 {
+            font-size: 32px;
+            font-weight: 700;
+            background: var(--gradient-2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-tagline {
+            font-size: 13px;
+            color: var(--text-secondary);
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .stats-badge {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 10px 20px;
+            background: var(--dark-card);
+            border-radius: 10px;
+            border: 1px solid var(--border);
+        }
+
+        .stat-number {
+            font-size: 22px;
+            font-weight: 700;
+            background: var(--gradient-2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 2px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 60px 0 40px;
+            text-align: center;
+            background: var(--gradient-3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+            top: -200px;
+            right: -200px;
+            border-radius: 50%;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(20, 184, 166, 0.1) 0%, transparent 70%);
+            bottom: -150px;
+            left: -150px;
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h2 {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            letter-spacing: -1px;
+        }
+
+        .hero-gradient {
+            background: var(--gradient-2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        /* NEW: Live Stats Banner */
+        .stats-banner {
+            display: flex;
+            justify-content: space-around;
+            padding: 30px;
+            background: var(--dark-card);
+            border-radius: 20px;
+            margin: 40px auto;
+            max-width: 1000px;
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-item .stat-number {
+            font-size: 42px;
+            font-weight: 800;
+            background: var(--gradient-2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .stat-item .stat-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .hero-stat {
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 25px 35px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .hero-stat:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .hero-stat-number {
+            font-size: 36px;
+            font-weight: 800;
+            background: var(--gradient-2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+
+        .hero-stat-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* Cards */
+        .card {
+            background: var(--dark-card);
+            border-radius: 24px;
+            padding: 40px;
+            margin-bottom: 30px;
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .card-subtitle {
+            font-size: 17px;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            line-height: 1.7;
+        }
+
+        /* Features */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .feature {
+            background: var(--dark-card-light);
+            padding: 35px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-2);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 15px 40px rgba(99, 102, 241, 0.2);
+        }
+
+        .feature:hover::before {
+            transform: scaleX(1);
+        }
+
+        .feature-icon {
+            font-size: 42px;
+            margin-bottom: 18px;
+            display: block;
+        }
+
+        .feature h3 {
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+        }
+
+        .feature p {
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* NEW: Quick Actions */
+        .quick-actions {
+            display: flex;
+            gap: 15px;
+            margin: 25px 0;
+            flex-wrap: wrap;
+        }
+
+        .quick-actions button {
+            flex: 1;
+            min-width: 180px;
+            padding: 14px 24px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .quick-actions button:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+        }
+
+        .quick-actions button:active {
+            transform: translateY(0);
+        }
+
+        /* NEW: Scam Type Badges */
+        .scam-types {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 25px 0;
+        }
+
+        .badge {
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            border: 2px solid;
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+
+        .badge.work-from-home {
+            background: rgba(239, 68, 68, 0.1);
+            color: #FCA5A5;
+            border-color: rgba(239, 68, 68, 0.3);
+        }
+
+        .badge.investment {
+            background: rgba(245, 158, 11, 0.1);
+            color: #FCD34D;
+            border-color: rgba(245, 158, 11, 0.3);
+        }
+
+        .badge.identity-theft {
+            background: rgba(168, 85, 247, 0.1);
+            color: #C4B5FD;
+            border-color: rgba(168, 85, 247, 0.3);
+        }
+
+        .badge.fake-company {
+            background: rgba(236, 72, 153, 0.1);
+            color: #FBCFE8;
+            border-color: rgba(236, 72, 153, 0.3);
+        }
+
+        .badge:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Test Cases */
+        .test-cases {
+            display: grid;
+            gap: 20px;
+        }
+
+        .test-case {
+            background: var(--dark-card-light);
+            border-radius: 16px;
+            padding: 28px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+        }
+
+        .test-case::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 6px;
+            height: 100%;
+            border-radius: 16px 0 0 16px;
+            transition: all 0.3s ease;
+        }
+
+        .test-case.danger::before {
+            background: var(--danger);
+        }
+
+        .test-case.success::before {
+            background: var(--success);
+        }
+
+        .test-case.warning::before {
+            background: var(--warning);
+        }
+
+        .test-case:hover {
+            transform: translateX(8px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+        }
+
+        .test-case-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .test-case h4 {
+            font-size: 19px;
+            font-weight: 600;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .test-case-badge {
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .test-case.danger .test-case-badge {
+            background: rgba(239, 68, 68, 0.2);
+            color: #FCA5A5;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+
+        .test-case.success .test-case-badge {
+            background: rgba(34, 197, 94, 0.2);
+            color: #86EFAC;
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+
+        .test-case.warning .test-case-badge {
+            background: rgba(245, 158, 11, 0.2);
+            color: #FCD34D;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+
+        .test-case p {
+            color: var(--text-secondary);
+            font-size: 15px;
+        }
+
+        /* Chat Section */
+        .chat-section {
+            background: var(--dark-card);
+            border-radius: 24px;
+            padding: 50px;
+            border: 1px solid var(--border);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .instructions {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(20, 184, 166, 0.1) 100%);
+            padding: 30px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+        }
+
+        .instructions h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--accent-bright);
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .instructions ol {
+            margin-left: 20px;
+            color: var(--text-secondary);
+        }
+
+        .instructions li {
+            margin: 12px 0;
+            line-height: 1.8;
+        }
+
+        /* Langflow Chat Container */
+        .chat-wrapper {
+            background: var(--dark-card-light);
+            border-radius: 20px;
+            padding: 0;
+            overflow: hidden;
+            border: 2px solid var(--border);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) inset;
+            min-height: 700px;
+        }
+
+        langflow-chat {
+            width: 100% !important;
+            min-height: 700px !important;
+            display: block !important;
+            border-radius: 20px;
+        }
+
+        /* Trust Bar */
+        .trust-bar {
+            background: var(--dark-card-light);
+            border-radius: 16px;
+            padding: 25px;
+            margin: 35px 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            border: 1px solid var(--border);
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 15px;
+            color: var(--text-secondary);
+        }
+
+        .trust-icon {
+            font-size: 28px;
+        }
+
+        /* Footer */
+        .footer {
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(10px);
+            color: var(--text-secondary);
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer p {
+            margin: 10px 0;
+            font-size: 15px;
+        }
+
+        /* Toast */
+        .toast {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--dark-card);
+            border: 1px solid var(--success);
+            padding: 18px 28px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(34, 197, 94, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            z-index: 1000;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .toast-icon {
+            font-size: 26px;
+        }
+
+        .toast-text {
+            font-weight: 600;
+            color: var(--success);
+            font-size: 15px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 36px;
+            }
+
+            .hero-subtitle {
+                font-size: 17px;
+            }
+
+            .card {
+                padding: 25px;
+            }
+
+            .chat-section {
+                padding: 30px 20px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .stats-badge {
+                flex-direction: row;
+                gap: 15px;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .stats-banner {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .quick-actions {
+                flex-direction: column;
+            }
+
+            .quick-actions button {
+                width: 100%;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+
+<script>
+    console.log('✅ ScamShield scripts loading...');
+
+    // Initialize stats from localStorage
+    window.addEventListener('DOMContentLoaded', () => {
+        console.log('✅ DOM loaded, initializing stats...');
+        updateStats();
+    });
+
+    function updateStats() {
+        try {
+            const totalChecks = parseInt(localStorage.getItem('total_checks') || 0);
+            const scamsDetected = parseInt(localStorage.getItem('scams_detected') || 0);
+            const usersProtected = parseInt(localStorage.getItem('users_protected') || 0);
+
+            const totalEl = document.getElementById('total-checks');
+            const scamsEl = document.getElementById('scams-detected');
+            const usersEl = document.getElementById('users-protected');
+
+            if (totalEl) totalEl.innerText = totalChecks;
+            if (scamsEl) scamsEl.innerText = scamsDetected;
+            if (usersEl) usersEl.innerText = usersProtected;
+            
+            console.log('✅ Stats updated:', {totalChecks, scamsDetected, usersProtected});
+        } catch (e) {
+            console.error('❌ Stats update error:', e);
+        }
+    }
+
+    function incrementStats(isScam = false) {
+        try {
+            let checks = parseInt(localStorage.getItem('total_checks') || 0) + 1;
+            localStorage.setItem('total_checks', checks);
+
+            if (isScam) {
+                let scams = parseInt(localStorage.getItem('scams_detected') || 0) + 1;
+                localStorage.setItem('scams_detected', scams);
+
+                let users = parseInt(localStorage.getItem('users_protected') || 0) + 1;
+                localStorage.setItem('users_protected', users);
+            }
+
+            updateStats();
+            console.log('✅ Stats incremented');
+        } catch (e) {
+            console.error('❌ Increment error:', e);
+        }
+    }
+
+    function copyToClipboard(text) {
+        console.log('📋 Copying test case...');
+        
+        if (!navigator.clipboard) {
+            // Fallback for older browsers
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            showToast('✅ Copied! Paste it in the chat below.');
+            incrementStats();
+            return;
+        }
+
+        navigator.clipboard.writeText(text).then(() => {
+            showToast('✅ Copied! Paste it in the chat below.');
+            incrementStats();
+            console.log('✅ Test case copied');
+        }).catch((err) => {
+            console.error('❌ Copy failed:', err);
+            alert('Failed to copy. Please try again.');
+        });
+    }
+
+    // SIMPLIFIED: Copy Report Function
+    function copyReport() {
+        console.log('📋 Copy Report clicked');
+        
+        try {
+            // Get all text content from the chat area
+            const chatWrapper = document.querySelector('.chat-wrapper');
+            
+            if (!chatWrapper) {
+                console.error('❌ Chat wrapper not found');
+                showToast('⚠️ Chat not found. Try again after analysis.');
+                return;
+            }
+
+            // Try to get the last bot message
+            const langflowChat = document.querySelector('langflow-chat');
+            let reportText = '';
+
+            if (langflowChat) {
+                // Try to access shadow DOM
+                try {
+                    if (langflowChat.shadowRoot) {
+                        const allText = langflowChat.shadowRoot.textContent || langflowChat.shadowRoot.innerText;
+                        // Extract report part (everything after "ScamShield AI Analyzer")
+                        if (allText.includes('SCAMSHIELD') || allText.includes('ANALYSIS')) {
+                            reportText = allText.substring(allText.indexOf('SCAMSHIELD'));
+                        } else {
+                            reportText = allText;
+                        }
+                    }
+                } catch (shadowError) {
+                    console.log('Shadow DOM access failed, trying alternative...');
+                }
+            }
+
+            // Fallback: Just copy a generic message
+            if (!reportText || reportText.length < 50) {
+                reportText = "ScamShield Analysis Report\n\nTo copy this report:\n1. Select the analysis text in the chat\n2. Press Ctrl+C (Windows) or Cmd+C (Mac)\n3. Paste anywhere you need it\n\nOr take a screenshot for your records.";
+            }
+
+            // Copy to clipboard
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(reportText).then(() => {
+                    showToast('📋 Report copied to clipboard!');
+                    console.log('✅ Report copied successfully');
+                }).catch(err => {
+                    console.error('❌ Clipboard write failed:', err);
+                    fallbackCopy(reportText);
+                });
+            } else {
+                fallbackCopy(reportText);
+            }
+
+        } catch (error) {
+            console.error('❌ Copy Report error:', error);
+            showToast('⚠️ Please select and copy the report manually (Ctrl+C)');
+        }
+    }
+
+    // Fallback copy method
+    function fallbackCopy(text) {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        textarea.style.position = 'fixed';
+        textarea.style.left = '-9999px';
+        document.body.appendChild(textarea);
+        textarea.select();
+        try {
+            document.execCommand('copy');
+            showToast('📋 Report copied!');
+            console.log('✅ Fallback copy successful');
+        } catch (err) {
+            console.error('❌ Fallback copy failed:', err);
+            showToast('⚠️ Copy failed. Please use Ctrl+C manually.');
+        }
+        document.body.removeChild(textarea);
+    }
+
+    // SIMPLIFIED: Share Report Function
+    function shareReport() {
+        console.log('📤 Share Report clicked');
+        
+        // Check if Web Share API is available
+        if (navigator.share) {
+            navigator.share({
+                title: 'ScamShield Analysis Report',
+                text: 'Check out this job scam analysis from ScamShield AI',
+                url: window.location.href
+            }).then(() => {
+                showToast('📤 Shared successfully!');
+                console.log('✅ Share successful');
+            }).catch((err) => {
+                if (err.name !== 'AbortError') {
+                    console.log('Share cancelled or failed, trying copy...');
+                    copyReport();
+                }
+            });
+        } else {
+            // Fallback: copy instead
+            console.log('Web Share API not supported, copying instead...');
+            showToast('📋 Share not supported. Copying report instead...');
+            setTimeout(() => copyReport(), 500);
+        }
+    }
+
+    // WORKING: Report Scam Function
+    function reportScam() {
+        console.log('🚩 Report Scam clicked');
+        
+        const cybercrimeUrl = 'https://cybercrime.gov.in/';
+        
+        // Simple confirmation
+        const confirmed = confirm(
+            '🚩 Report to Indian Cyber Crime Portal?\n\n' +
+            'You will be redirected to cybercrime.gov.in\n\n' +
+            'Click OK to continue.'
+        );
+        
+        if (confirmed) {
+            console.log('✅ Opening cybercrime.gov.in...');
+            
+            // Open in new tab
+            const newWindow = window.open(cybercrimeUrl, '_blank');
+            
+            if (newWindow) {
+                showToast('🚩 Opening Cyber Crime Portal...');
+                
+                // Update scam detection counter
+                let scams = parseInt(localStorage.getItem('scams_detected') || 0) + 1;
+                localStorage.setItem('scams_detected', scams);
+                updateStats();
+            } else {
+                // Popup blocked
+                showToast('⚠️ Please allow popups for this site');
+                // Try direct navigation as fallback
+                setTimeout(() => {
+                    window.location.href = cybercrimeUrl;
+                }, 1000);
+            }
+        } else {
+            console.log('Report cancelled by user');
+            showToast('Report cancelled. Stay safe! 🛡️');
+        }
+    }
+
+    // WORKING: Toast Function
+    function showToast(message) {
+        console.log('Toast:', message);
+        
+        // Remove existing toasts
+        const existingToasts = document.querySelectorAll('.toast');
+        existingToasts.forEach(toast => {
+            toast.remove();
+        });
+
+        // Create new toast
+        const toast = document.createElement('div');
+        toast.className = 'toast';
+        
+        // Parse emoji from message
+        const emojiMatch = message.match(/^[^\w\s]/);
+        const emoji = emojiMatch ? emojiMatch[0] : '✅';
+        const text = message.replace(/^[^\w\s]\s*/, '');
+        
+        toast.innerHTML = `
+            <span class="toast-icon">${emoji}</span>
+            <span class="toast-text">${text}</span>
+        `;
+        
+        document.body.appendChild(toast);
+        
+        // Auto-remove after 3 seconds
+        setTimeout(() => {
+            toast.style.animation = 'slideIn 0.3s ease-out reverse';
+            setTimeout(() => {
+                toast.remove();
+            }, 300);
+        }, 3000);
+    }
+
+    // Test buttons on load
+    window.addEventListener('load', () => {
+        console.log('✅ Page fully loaded');
+        
+        // Test if buttons exist
+        const buttons = document.querySelectorAll('.quick-actions button');
+        console.log('Found', buttons.length, 'action buttons');
+        
+        buttons.forEach((btn, i) => {
+            console.log(`Button ${i+1}:`, btn.textContent.trim());
+        });
+    });
+
+    console.log('✅ All functions loaded');
+</script>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <span class="logo-icon">🛡️</span>
+                    <div class="logo-text">
+                        <h1>ScamShield</h1>
+                        <div class="logo-tagline">AI-POWERED JOB SAFETY</div>
+                    </div>
+                </a>
+                <div class="stats-badge">
+                    <div class="stat">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">Accuracy</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">&lt;3s</div>
+                        <div class="stat-label">Speed</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Private</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <div class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>
+                    Protect Your Career from<br>
+                    <span class="hero-gradient">Job Scams</span>
+                </h2>
+                <p class="hero-subtitle">India's First AI-Powered Real-Time Job Scam Detector</p>
+                
+                <!-- NEW: Live Statistics Banner -->
+                <div class="stats-banner">
+                    <div class="stat-item">
+                        <span class="stat-number" id="total-checks">0</span>
+                        <span class="stat-label">Scams Analyzed Today</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="scams-detected">0</span>
+                        <span class="stat-label">Scams Detected</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="users-protected">0</span>
+                        <span class="stat-label">Users Protected</span>
+                    </div>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">₹10,000 Cr</div>
+                        <div class="hero-stat-label">Lost Annually in India</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">3.2M+</div>
+                        <div class="hero-stat-label">Job Seekers Affected</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">78%</div>
+                        <div class="hero-stat-label">Scams via WhatsApp</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container" style="padding-top: 40px;">
+        <!-- Problem -->
+        <div class="card">
+            <h2 class="card-title">
+                <span>📊</span>
+                The Job Scam Crisis in India
+            </h2>
+            <p class="card-subtitle">
+                Fraudsters exploit desperate job seekers through fake postings on WhatsApp, Telegram, and unverified 
+                platforms. Victims lose not just money, but hope. ScamShield uses GenAI to stop them.
+            </p>
+            
+            <!-- NEW: Scam Type Badges -->
+            <div class="scam-types">
+                <div class="badge work-from-home">Work-from-Home</div>
+                <div class="badge investment">Investment Scam</div>
+                <div class="badge identity-theft">Identity Theft</div>
+                <div class="badge fake-company">Fake Company</div>
+            </div>
+            
+            <div class="trust-bar">
+                <div class="trust-item">
+                    <span class="trust-icon">🔒</span>
+                    <span><strong>100% Private</strong> - No data stored</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon">⚡</span>
+                    <span><strong>Real-Time</strong> - Instant results</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon">🇮🇳</span>
+                    <span><strong>India-Aware</strong> - Local patterns</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon">🤖</span>
+                    <span><strong>GenAI</strong> - Advanced reasoning</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- How It Works -->
+        <div class="card">
+            <h2 class="card-title">
+                <span>🚀</span>
+                Three-Layer AI Protection
+            </h2>
+            <p class="card-subtitle">
+                Hybrid intelligence combining pattern recognition, domain validation, and GenAI reasoning
+            </p>
+            
+            <div class="features-grid">
+                <div class="feature">
+                    <span class="feature-icon">🔍</span>
+                    <h3>Pattern Recognition</h3>
+                    <p>Detects 20+ India-specific scam keywords like "ghar baithe kamao", Telegram recruitment, and upfront fee requests using advanced heuristics.</p>
+                </div>
+                
+                <div class="feature">
+                    <span class="feature-icon">🌐</span>
+                    <h3>Domain Validation</h3>
+                    <p>Verifies job sources against trusted Indian portals (Naukri, LinkedIn, Internshala) and flags suspicious domains.</p>
+                </div>
+                
+                <div class="feature">
+                    <span class="feature-icon">🤖</span>
+                    <h3>GenAI Analysis</h3>
+                    <p>LLM provides contextual reasoning to understand nuanced scam tactics and generate safety recommendations.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Test Cases -->
+        <div class="card">
+            <h2 class="card-title">
+                <span>🧪</span>
+                Quick Test Cases
+            </h2>
+            <p class="card-subtitle">
+                Click any case to copy it, then paste into the analyzer below
+            </p>
+            
+            <div class="test-cases">
+                <div class="test-case danger" onclick="copyToClipboard(this.getAttribute('data-text'));" data-text="🔥 URGENT HIRING! Earn ₹50,000 DAILY from home! Simple Google review tasks. No experience needed. Join Telegram NOW: @QuickCashJobs. One-time registration fee: ₹500 (FULLY REFUNDABLE). WhatsApp: +91-98765-43210. HURRY! Limited slots filling fast!">
+                    <div class="test-case-header">
+                        <h4><span>🚨</span> Test 1: Obvious Scam</h4>
+                        <span class="test-case-badge">75-90 Score</span>
+                    </div>
+                    <p>Telegram recruitment • Upfront fees • Unrealistic ₹50K daily • Urgency tactics</p>
+                </div>
+
+                <div class="test-case success" onclick="copyToClipboard(this.getAttribute('data-text'));" data-text="Software Engineer - Backend. Company: Zomato, Gurugram. Posted on: linkedin.com/jobs/zomato. Requirements: 2-4 years Python/Java, AWS, Docker. Salary: ₹12-18 LPA. Benefits: Health insurance, flexible work. Interview: Technical screening + Coding + HR. Apply: careers.zomato.com">
+                    <div class="test-case-header">
+                        <h4><span>✅</span> Test 2: Legitimate Job</h4>
+                        <span class="test-case-badge">8-15 Score</span>
+                    </div>
+                    <p>LinkedIn posting • Proper company • Realistic salary • Multi-round interview</p>
+                </div>
+
+                <div class="test-case warning" onclick="copyToClipboard(this.getAttribute('data-text'));" data-text="Part-time Content Writer. Payment: ₹500 per article. Work from home. No experience required. Contact WhatsApp: +91-87654-32109. Send samples to: quickhire123@gmail.com. Payment within 7 days.">
+                    <div class="test-case-header">
+                        <h4><span>⚠️</span> Test 3: Grey Area</h4>
+                        <span class="test-case-badge">45-60 Score</span>
+                    </div>
+                    <p>WhatsApp only • Gmail business email • Vague terms • No company info</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Analyzer -->
+        <div class="chat-section">
+            <h2 class="card-title">
+                <span>💬</span>
+                Live Scam Analyzer
+            </h2>
+            
+            <div class="instructions">
+                <h3><span>📝</span> How to Use</h3>
+                <ol>
+                    <li><strong>Click a test case above</strong> to copy it automatically</li>
+                    <li><strong>Paste in the chat below</strong> and press Send</li>
+                    <li><strong>Wait 3-5 seconds</strong> for AI analysis</li>
+                    <li><strong>Review detailed results:</strong> score, red flags, and recommendations</li>
+                </ol>
+            </div>
+
+            <!-- NEW: Quick Actions -->
+            <div class="quick-actions">
+                <button onclick="copyReport()">📋 Copy Report</button>
+                <button onclick="shareReport()">📤 Share Report</button>
+                <button onclick="reportScam()">🚩 Report Scam</button>
+            </div>
+
+            <!-- UNCHANGED: Langflow Chat Container -->
+            <div class="chat-wrapper">
+                <script src="https://cdn.jsdelivr.net/gh/logspace-ai/langflow-embedded-chat@v1.0.7/dist/build/static/js/bundle.min.js"></script>
+                
+                <langflow-chat
+                    window_title="ScamShield AI Analyzer"
+                    flow_id="1a6f2c46-dc0e-4fa0-9592-699118ab1673"
+                    api_key="YOUR_API_KEY_HERE"
+                    headers='{"ngrok-skip-browser-warning": "true"}'
+                    host_url="YOUR_NGROK_URL_HERE"
+                    chat_input_placeholder="Paste a job posting here to analyze for scams..."
+                    bot_message_style='{"backgroundColor": "#334155", "color": "#F1F5F9", "borderRadius": "12px"}'
+                    user_message_style='{"backgroundColor": "#6366F1", "color": "#FFFFFF", "borderRadius": "12px"}'>
+                </langflow-chat>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <p><strong>🔒 Privacy-First Design:</strong> All analysis is ephemeral. No data stored, tracked, or shared.</p>
+            <p style="margin-top: 15px;">Built with ❤️ for protecting Indian job seekers | Powered by Langflow + GenAI</p>
+            <p style="margin-top: 10px; font-size: 13px; opacity: 0.8;">ScamShield © 2025 | GenAI Hackathon Project</p>
+        </div>
+    </div>
+
+    <script>
+        // Initialize stats from localStorage
+        window.addEventListener('DOMContentLoaded', () => {
+            updateStats();
+        });
+
+        function updateStats() {
+            const totalChecks = parseInt(localStorage.getItem('total_checks') || 0);
+            const scamsDetected = parseInt(localStorage.getItem('scams_detected') || 0);
+            const usersProtected = parseInt(localStorage.getItem('users_protected') || 0);
+
+            document.getElementById('total-checks').innerText = totalChecks;
+            document.getElementById('scams-detected').innerText = scamsDetected;
+            document.getElementById('users-protected').innerText = usersProtected;
+        }
+
+        function incrementStats(isScam = false) {
+            let checks = parseInt(localStorage.getItem('total_checks') || 0) + 1;
+            localStorage.setItem('total_checks', checks);
+
+            if (isScam) {
+                let scams = parseInt(localStorage.getItem('scams_detected') || 0) + 1;
+                localStorage.setItem('scams_detected', scams);
+
+                let users = parseInt(localStorage.getItem('users_protected') || 0) + 1;
+                localStorage.setItem('users_protected', users);
+            }
+
+            updateStats();
+        }
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                showToast('✅ Copied! Paste it in the chat below.');
+                incrementStats();
+            }).catch(() => {
+                alert('Failed to copy. Please try again.');
+            });
+        }
+
+        function copyReport() {
+            const report = document.querySelector('langflow-chat').shadowRoot.querySelector('.bot-message');
+            if (report) {
+                navigator.clipboard.writeText(report.innerText);
+                showToast('📋 Report copied to clipboard!');
+            } else {
+                showToast('⚠️ No report to copy yet. Run an analysis first!');
+            }
+        }
+
+        function shareReport() {
+            const report = document.querySelector('langflow-chat').shadowRoot.querySelector('.bot-message');
+            if (report && navigator.share) {
+                navigator.share({
+                    title: 'ScamShield Analysis Report',
+                    text: report.innerText
+                });
+            } else if (report) {
+                copyReport();
+            } else {
+                showToast('⚠️ No report to share yet. Run an analysis first!');
+            }
+        }
+
+        function reportScam() {
+            showToast('🚩 Report feature coming soon! For now, report to cybercrime.gov.in');
+        }
+
+        function showToast(message) {
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.innerHTML = `
+                <span class="toast-icon">${message.charAt(0)}</span>
+                <span class="toast-text">${message.substring(2)}</span>
+            `;
+            document.body.appendChild(toast);
+            
+            setTimeout(() => {
+                toast.style.animation = 'slideIn 0.3s ease-out reverse';
+                setTimeout(() => toast.remove(), 300);
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

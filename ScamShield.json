@@ -1,0 +1,1934 @@
+{
+  "data": {
+    "edges": [
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "LLMParser",
+            "id": "CustomComponent-4pf1g",
+            "name": "output",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "llm_result",
+            "id": "CustomComponent-Ldo1N",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__CustomComponent-4pf1g{œdataTypeœ:œLLMParserœ,œidœ:œCustomComponent-4pf1gœ,œnameœ:œoutputœ,œoutput_typesœ:[œMessageœ]}-CustomComponent-Ldo1N{œfieldNameœ:œllm_resultœ,œidœ:œCustomComponent-Ldo1Nœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "CustomComponent-4pf1g",
+        "sourceHandle": "{œdataTypeœ:œLLMParserœ,œidœ:œCustomComponent-4pf1gœ,œnameœ:œoutputœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "CustomComponent-Ldo1N",
+        "targetHandle": "{œfieldNameœ:œllm_resultœ,œidœ:œCustomComponent-Ldo1Nœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "OpenRouterComponent",
+            "id": "OpenRouterComponent-o4xaY",
+            "name": "text_output",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "llm_output",
+            "id": "CustomComponent-4pf1g",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__OpenRouterComponent-o4xaY{œdataTypeœ:œOpenRouterComponentœ,œidœ:œOpenRouterComponent-o4xaYœ,œnameœ:œtext_outputœ,œoutput_typesœ:[œMessageœ]}-CustomComponent-4pf1g{œfieldNameœ:œllm_outputœ,œidœ:œCustomComponent-4pf1gœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "OpenRouterComponent-o4xaY",
+        "sourceHandle": "{œdataTypeœ:œOpenRouterComponentœ,œidœ:œOpenRouterComponent-o4xaYœ,œnameœ:œtext_outputœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "CustomComponent-4pf1g",
+        "targetHandle": "{œfieldNameœ:œllm_outputœ,œidœ:œCustomComponent-4pf1gœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "ChatInput",
+            "id": "ChatInput-8GrZ9",
+            "name": "message",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "user_input",
+            "id": "CustomComponent-8ysnV",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__ChatInput-8GrZ9{œdataTypeœ:œChatInputœ,œidœ:œChatInput-8GrZ9œ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}-CustomComponent-8ysnV{œfieldNameœ:œuser_inputœ,œidœ:œCustomComponent-8ysnVœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "ChatInput-8GrZ9",
+        "sourceHandle": "{œdataTypeœ:œChatInputœ,œidœ:œChatInput-8GrZ9œ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "CustomComponent-8ysnV",
+        "targetHandle": "{œfieldNameœ:œuser_inputœ,œidœ:œCustomComponent-8ysnVœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "UnifiedTextProcessor",
+            "id": "CustomComponent-8ysnV",
+            "name": "output",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_value",
+            "id": "OpenRouterComponent-o4xaY",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__CustomComponent-8ysnV{œdataTypeœ:œUnifiedTextProcessorœ,œidœ:œCustomComponent-8ysnVœ,œnameœ:œoutputœ,œoutput_typesœ:[œMessageœ]}-OpenRouterComponent-o4xaY{œfieldNameœ:œinput_valueœ,œidœ:œOpenRouterComponent-o4xaYœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "CustomComponent-8ysnV",
+        "sourceHandle": "{œdataTypeœ:œUnifiedTextProcessorœ,œidœ:œCustomComponent-8ysnVœ,œnameœ:œoutputœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "OpenRouterComponent-o4xaY",
+        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œOpenRouterComponent-o4xaYœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "ResultFormatter",
+            "id": "CustomComponent-AQwn4",
+            "name": "output",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_value",
+            "id": "ChatOutput-CCdEx",
+            "inputTypes": [
+              "Data",
+              "DataFrame",
+              "Message"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__CustomComponent-AQwn4{œdataTypeœ:œResultFormatterœ,œidœ:œCustomComponent-AQwn4œ,œnameœ:œoutputœ,œoutput_typesœ:[œMessageœ]}-ChatOutput-CCdEx{œfieldNameœ:œinput_valueœ,œidœ:œChatOutput-CCdExœ,œinputTypesœ:[œDataœ,œDataFrameœ,œMessageœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "CustomComponent-AQwn4",
+        "sourceHandle": "{œdataTypeœ:œResultFormatterœ,œidœ:œCustomComponent-AQwn4œ,œnameœ:œoutputœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "ChatOutput-CCdEx",
+        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œChatOutput-CCdExœ,œinputTypesœ:[œDataœ,œDataFrameœ,œMessageœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "UnifiedTextProcessor",
+            "id": "CustomComponent-8ysnV",
+            "name": "output",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "text_input",
+            "id": "CustomComponent-nNYta",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__CustomComponent-8ysnV{œdataTypeœ:œUnifiedTextProcessorœ,œidœ:œCustomComponent-8ysnVœ,œnameœ:œoutputœ,œoutput_typesœ:[œMessageœ]}-CustomComponent-nNYta{œfieldNameœ:œtext_inputœ,œidœ:œCustomComponent-nNYtaœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "CustomComponent-8ysnV",
+        "sourceHandle": "{œdataTypeœ:œUnifiedTextProcessorœ,œidœ:œCustomComponent-8ysnVœ,œnameœ:œoutputœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "CustomComponent-nNYta",
+        "targetHandle": "{œfieldNameœ:œtext_inputœ,œidœ:œCustomComponent-nNYtaœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "EnhancedDomainValidator",
+            "id": "CustomComponent-nNYta",
+            "name": "output",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "domain_result",
+            "id": "CustomComponent-Ldo1N",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__CustomComponent-nNYta{œdataTypeœ:œEnhancedDomainValidatorœ,œidœ:œCustomComponent-nNYtaœ,œnameœ:œoutputœ,œoutput_typesœ:[œMessageœ]}-CustomComponent-Ldo1N{œfieldNameœ:œdomain_resultœ,œidœ:œCustomComponent-Ldo1Nœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "CustomComponent-nNYta",
+        "sourceHandle": "{œdataTypeœ:œEnhancedDomainValidatorœ,œidœ:œCustomComponent-nNYtaœ,œnameœ:œoutputœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "CustomComponent-Ldo1N",
+        "targetHandle": "{œfieldNameœ:œdomain_resultœ,œidœ:œCustomComponent-Ldo1Nœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "UnifiedTextProcessor",
+            "id": "CustomComponent-8ysnV",
+            "name": "output",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "text_input",
+            "id": "CustomComponent-N483a",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__CustomComponent-8ysnV{œdataTypeœ:œUnifiedTextProcessorœ,œidœ:œCustomComponent-8ysnVœ,œnameœ:œoutputœ,œoutput_typesœ:[œMessageœ]}-CustomComponent-N483a{œfieldNameœ:œtext_inputœ,œidœ:œCustomComponent-N483aœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "CustomComponent-8ysnV",
+        "sourceHandle": "{œdataTypeœ:œUnifiedTextProcessorœ,œidœ:œCustomComponent-8ysnVœ,œnameœ:œoutputœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "CustomComponent-N483a",
+        "targetHandle": "{œfieldNameœ:œtext_inputœ,œidœ:œCustomComponent-N483aœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "AdvancedHeuristicScorer",
+            "id": "CustomComponent-N483a",
+            "name": "output",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "heuristic_result",
+            "id": "CustomComponent-Ldo1N",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__CustomComponent-N483a{œdataTypeœ:œAdvancedHeuristicScorerœ,œidœ:œCustomComponent-N483aœ,œnameœ:œoutputœ,œoutput_typesœ:[œMessageœ]}-CustomComponent-Ldo1N{œfieldNameœ:œheuristic_resultœ,œidœ:œCustomComponent-Ldo1Nœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "CustomComponent-N483a",
+        "sourceHandle": "{œdataTypeœ:œAdvancedHeuristicScorerœ,œidœ:œCustomComponent-N483aœ,œnameœ:œoutputœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "CustomComponent-Ldo1N",
+        "targetHandle": "{œfieldNameœ:œheuristic_resultœ,œidœ:œCustomComponent-Ldo1Nœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "SmartScoreCombiner",
+            "id": "CustomComponent-Ldo1N",
+            "name": "output",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "json_input",
+            "id": "CustomComponent-AQwn4",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__CustomComponent-Ldo1N{œdataTypeœ:œSmartScoreCombinerœ,œidœ:œCustomComponent-Ldo1Nœ,œnameœ:œoutputœ,œoutput_typesœ:[œMessageœ]}-CustomComponent-AQwn4{œfieldNameœ:œjson_inputœ,œidœ:œCustomComponent-AQwn4œ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "CustomComponent-Ldo1N",
+        "sourceHandle": "{œdataTypeœ:œSmartScoreCombinerœ,œidœ:œCustomComponent-Ldo1Nœ,œnameœ:œoutputœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "CustomComponent-AQwn4",
+        "targetHandle": "{œfieldNameœ:œjson_inputœ,œidœ:œCustomComponent-AQwn4œ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      }
+    ],
+    "nodes": [
+      {
+        "data": {
+          "id": "CustomComponent-8ysnV",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Handles text/URL inputs",
+            "display_name": "Text Processor",
+            "documentation": "",
+            "edited": true,
+            "field_order": [
+              "user_input"
+            ],
+            "frozen": false,
+            "legacy": false,
+            "lf_version": "1.6.7",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Processed Text",
+                "group_outputs": false,
+                "hidden": null,
+                "method": "process_input",
+                "name": "output",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.custom import Component\r\nfrom langflow.io import MessageTextInput, Output\r\nfrom langflow.schema.message import Message\r\nimport re\r\nimport os\r\n\r\nclass UnifiedTextProcessor(Component):\r\n    display_name = \"Text Processor\"\r\n    description = \"Handles text/image/URL inputs\"\r\n    \r\n    inputs = [\r\n        MessageTextInput(\r\n            name=\"user_input\",\r\n            display_name=\"User Input\",\r\n            info=\"Text, screenshot, or URL\"\r\n        )\r\n    ]\r\n    \r\n    outputs = [\r\n        Output(display_name=\"Processed Text\", name=\"output\", method=\"process_input\")\r\n    ]\r\n    \r\n    def process_input(self) -> Message:\r\n        user_input = self.user_input\r\n        processed_text = \"\"\r\n        \r\n        print(f\"DEBUG - Input received: {user_input}\")\r\n        print(f\"DEBUG - Input type: {type(user_input)}\")\r\n        \r\n        # Check if user_input is a Message object with files\r\n        if hasattr(user_input, 'files') and user_input.files:\r\n            print(\"DEBUG - Files attribute found\")\r\n            try:\r\n                import pytesseract\r\n                from PIL import Image\r\n                \r\n                file_path = user_input.files[0]\r\n                print(f\"DEBUG - File path: {file_path}\")\r\n                \r\n                # Configure Tesseract\r\n                pytesseract.pytesseract.tesseract_cmd = r'C:\\Program Files\\Tesseract-OCR\\tesseract.exe'\r\n                \r\n                # Open and process image\r\n                image = Image.open(file_path)\r\n                image = image.convert('L')  # Grayscale\r\n                \r\n                # OCR\r\n                custom_config = r'--oem 3 --psm 6 -l eng'\r\n                processed_text = pytesseract.image_to_string(image, config=custom_config)\r\n                \r\n                print(f\"DEBUG - OCR extracted: {processed_text[:200]}\")\r\n                \r\n            except Exception as e:\r\n                print(f\"DEBUG - OCR Error: {str(e)}\")\r\n                processed_text = f\"Error: {str(e)}\"\r\n        \r\n        # Check if user_input has a text attribute\r\n        elif hasattr(user_input, 'text'):\r\n            text_content = user_input.text\r\n            print(f\"DEBUG - Text from message: {text_content[:100] if text_content else 'EMPTY'}\")\r\n            \r\n            # If text is empty but there might be a file reference\r\n            if not text_content or text_content.strip() == \"\":\r\n                # Check if there's a file reference in the message data\r\n                if hasattr(user_input, 'data') and user_input.data:\r\n                    print(f\"DEBUG - Message data: {user_input.data}\")\r\n                    \r\n                    # Look for file path in data\r\n                    if 'file_path' in user_input.data:\r\n                        try:\r\n                            import pytesseract\r\n                            from PIL import Image\r\n                            \r\n                            file_path = user_input.data['file_path']\r\n                            print(f\"DEBUG - Found file path in data: {file_path}\")\r\n                            \r\n                            pytesseract.pytesseract.tesseract_cmd = r'C:\\Program Files\\Tesseract-OCR\\tesseract.exe'\r\n                            \r\n                            image = Image.open(file_path)\r\n                            image = image.convert('L')\r\n                            custom_config = r'--oem 3 --psm 6 -l eng'\r\n                            processed_text = pytesseract.image_to_string(image, config=custom_config)\r\n                            \r\n                            print(f\"DEBUG - OCR from data path: {processed_text[:200]}\")\r\n                        except Exception as e:\r\n                            print(f\"DEBUG - Error processing file from data: {str(e)}\")\r\n                            processed_text = \"\"\r\n                else:\r\n                    processed_text = \"\"\r\n            else:\r\n                # Handle URL\r\n                if text_content.startswith('http'):\r\n                    try:\r\n                        import requests\r\n                        from bs4 import BeautifulSoup\r\n                        \r\n                        headers = {'User-Agent': 'Mozilla/5.0'}\r\n                        response = requests.get(text_content, headers=headers, timeout=10)\r\n                        soup = BeautifulSoup(response.content, 'html.parser')\r\n                        \r\n                        for script in soup([\"script\", \"style\"]):\r\n                            script.decompose()\r\n                        \r\n                        processed_text = soup.get_text()\r\n                        processed_text = ' '.join(processed_text.split())[:3000]\r\n                    except Exception as e:\r\n                        processed_text = text_content\r\n                else:\r\n                    # Plain text\r\n                    processed_text = text_content\r\n        \r\n        # Fallback: treat as string\r\n        else:\r\n            user_input_str = str(user_input)\r\n            print(f\"DEBUG - String input: {user_input_str[:100]}\")\r\n            \r\n            if user_input_str.startswith('http'):\r\n                # URL handling\r\n                try:\r\n                    import requests\r\n                    from bs4 import BeautifulSoup\r\n                    \r\n                    headers = {'User-Agent': 'Mozilla/5.0'}\r\n                    response = requests.get(user_input_str, headers=headers, timeout=10)\r\n                    soup = BeautifulSoup(response.content, 'html.parser')\r\n                    \r\n                    for script in soup([\"script\", \"style\"]):\r\n                        script.decompose()\r\n                    \r\n                    processed_text = soup.get_text()\r\n                    processed_text = ' '.join(processed_text.split())[:3000]\r\n                except:\r\n                    processed_text = user_input_str\r\n            else:\r\n                processed_text = user_input_str\r\n        \r\n        # Clean text\r\n        if processed_text:\r\n            processed_text = re.sub(r'\\s+', ' ', processed_text)\r\n            processed_text = processed_text[:3000].strip()\r\n        \r\n        print(f\"DEBUG - Final output length: {len(processed_text)}\")\r\n        print(f\"DEBUG - Final output preview: {processed_text[:200]}\")\r\n        \r\n        return Message(text=processed_text if processed_text else \"No text could be extracted from input\")\r\n"
+              },
+              "user_input": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "User Input",
+                "dynamic": false,
+                "info": "Text, screenshot, or URL",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "user_input",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "UnifiedTextProcessor"
+        },
+        "dragging": false,
+        "id": "CustomComponent-8ysnV",
+        "measured": {
+          "height": 203,
+          "width": 320
+        },
+        "position": {
+          "x": -179.2812961748316,
+          "y": 482.91299954974045
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "CustomComponent-4pf1g",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Parse LLM JSON response",
+            "display_name": "LLM Parser",
+            "documentation": "",
+            "edited": true,
+            "field_order": [
+              "llm_output"
+            ],
+            "frozen": false,
+            "legacy": false,
+            "lf_version": "1.6.7",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Parsed Data",
+                "group_outputs": false,
+                "hidden": null,
+                "method": "parse_llm",
+                "name": "output",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.custom import Component\r\nfrom langflow.io import MessageTextInput, Output\r\nfrom langflow.schema.message import Message\r\nimport json\r\nimport re\r\n\r\nclass LLMParser(Component):\r\n    display_name = \"LLM Parser\"\r\n    description = \"Parse LLM JSON response\"\r\n    \r\n    inputs = [\r\n        MessageTextInput(\r\n            name=\"llm_output\",\r\n            display_name=\"LLM Output\"\r\n        )\r\n    ]\r\n    \r\n    outputs = [\r\n        Output(display_name=\"Parsed Data\", name=\"output\", method=\"parse_llm\")\r\n    ]\r\n    \r\n    def parse_llm(self) -> Message:\r\n        llm_text = str(self.llm_output)\r\n        \r\n        try:\r\n            # Remove markdown code blocks if present\r\n            json_match = re.search(r'``````', llm_text, re.DOTALL)\r\n            if json_match:\r\n                llm_text = json_match.group(1)\r\n            \r\n            # Extract JSON object\r\n            json_match = re.search(r'\\{.*\\}', llm_text, re.DOTALL)\r\n            if json_match:\r\n                llm_text = json_match.group(0)\r\n            \r\n            llm_data = json.loads(llm_text)\r\n            \r\n        except Exception as e:\r\n            llm_data = {\r\n                \"verdict\": \"ERROR\",\r\n                \"llm_risk\": 50,\r\n                \"top_reasons\": [f\"Parse error: {str(e)[:100]}\"],\r\n                \"privacy_warn\": \"Unknown\",\r\n                \"next_steps\": [\"Manual review required\"],\r\n                \"safe_reply\": \"Could you provide more details?\",\r\n                \"explain_brief\": \"Analysis incomplete due to parsing error.\"\r\n            }\r\n        \r\n        # Return as Message with JSON string\r\n        return Message(text=json.dumps(llm_data))\r\n"
+              },
+              "llm_output": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "LLM Output",
+                "dynamic": false,
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "llm_output",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "LLMParser"
+        },
+        "dragging": false,
+        "id": "CustomComponent-4pf1g",
+        "measured": {
+          "height": 203,
+          "width": 320
+        },
+        "position": {
+          "x": 801.2319995925476,
+          "y": 1027.362598902309
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "CustomComponent-nNYta",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Validates domains by actually visiting URLs and reading job descriptions",
+            "display_name": "Domain Validator",
+            "documentation": "",
+            "edited": true,
+            "field_order": [
+              "text_input"
+            ],
+            "frozen": false,
+            "legacy": false,
+            "lf_version": "1.6.7",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Domain Result",
+                "group_outputs": false,
+                "hidden": null,
+                "method": "validate_domains",
+                "name": "output",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.custom import Component\r\nfrom langflow.io import MessageTextInput, Output\r\nfrom langflow.schema.message import Message\r\nimport re\r\nimport json\r\nimport requests\r\nfrom urllib.parse import urlparse\r\nfrom bs4 import BeautifulSoup\r\n\r\n\r\nclass EnhancedDomainValidator(Component):\r\n    display_name = \"Enhanced Domain Validator\"\r\n    description = \"Validates domains by actually visiting URLs and reading job descriptions\"\r\n    \r\n    inputs = [\r\n        MessageTextInput(\r\n            name=\"text_input\",\r\n            display_name=\"Text to Analyze\",\r\n            info=\"Job posting text with URLs\"\r\n        )\r\n    ]\r\n    \r\n    outputs = [\r\n        Output(display_name=\"Domain Result\", name=\"output\", method=\"validate_domains\")\r\n    ]\r\n    \r\n    def validate_domains(self) -> Message:\r\n        try:\r\n            text = self.text_input\r\n            score = 0\r\n            flags = []\r\n            \r\n            # ═══════════════════════════════════════════\r\n            # TRUSTED PLATFORMS (Baseline Check)\r\n            # ═══════════════════════════════════════════\r\n            trusted_domains = [\r\n                'linkedin.com', 'naukri.com', 'indeed.com', \r\n                'internshala.com', 'shine.com', 'monster.com',\r\n                'glassdoor.com', 'foundit.in', 'apna.co',\r\n                'hirist.com', 'freshersworld.com'\r\n            ]\r\n            \r\n            # ═══════════════════════════════════════════\r\n            # EXTRACT URLs FROM TEXT\r\n            # ═══════════════════════════════════════════\r\n            url_pattern = r'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\\\(\\\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'\r\n            urls = re.findall(url_pattern, text)\r\n            \r\n            # Also check for domains mentioned without http\r\n            domain_pattern = r'(?:www\\.)?([a-zA-Z0-9-]+\\.[a-zA-Z]{2,}(?:\\.[a-zA-Z]{2,})?)'\r\n            mentioned_domains = re.findall(domain_pattern, text)\r\n            \r\n            # ═══════════════════════════════════════════\r\n            # EXTRACT EMAIL DOMAINS\r\n            # ═══════════════════════════════════════════\r\n            emails = re.findall(r'[\\w\\.-]+@([\\w\\.-]+)', text)\r\n            \r\n            # ═══════════════════════════════════════════\r\n            # CHECK EMAIL DOMAINS\r\n            # ═══════════════════════════════════════════\r\n            for email_domain in emails:\r\n                if email_domain.lower() in ['gmail.com', 'yahoo.com', 'hotmail.com', \r\n                                              'outlook.com', 'rediffmail.com']:\r\n                    score += 20\r\n                    flags.append(f\"🚩 Generic email provider: {email_domain}\")\r\n                else:\r\n                    # Corporate email - good sign\r\n                    score -= 10\r\n                    flags.append(f\"✅ Corporate email domain: {email_domain}\")\r\n            \r\n            # ═══════════════════════════════════════════\r\n            # PROCESS EACH URL (ACTUAL BROWSING)\r\n            # ═══════════════════════════════════════════\r\n            if urls:\r\n                for url in urls[:3]:  # Limit to 3 URLs to avoid timeout\r\n                    url_score, url_flags = self.check_url(url, trusted_domains)\r\n                    score += url_score\r\n                    flags.extend(url_flags)\r\n            else:\r\n                # No URLs found - suspicious for job postings\r\n                if any(keyword in text.lower() for keyword in ['apply', 'job', 'hiring', 'position']):\r\n                    score += 25\r\n                    flags.append(\"🚩 No official URL provided for application\")\r\n            \r\n            # ═══════════════════════════════════════════\r\n            # CHECK FOR MESSAGING APP RECRUITMENT\r\n            # ═══════════════════════════════════════════\r\n            if 'whatsapp' in text.lower() or 'telegram' in text.lower():\r\n                has_legitimate_url = any(\r\n                    any(trusted in url.lower() for trusted in trusted_domains) \r\n                    for url in urls\r\n                )\r\n                if not has_legitimate_url:\r\n                    score += 30\r\n                    flags.append(\"🚨 Recruitment via messaging apps (WhatsApp/Telegram)\")\r\n            \r\n            # ═══════════════════════════════════════════\r\n            # CAP SCORE BETWEEN 0-100\r\n            # ═══════════════════════════════════════════\r\n            score = max(0, min(score, 100))\r\n            \r\n            # ═══════════════════════════════════════════\r\n            # BUILD RESULT JSON\r\n            # ═══════════════════════════════════════════\r\n            result = {\r\n                'domain_score': score,\r\n                'domain_flags': flags\r\n            }\r\n            \r\n            return Message(text=json.dumps(result))\r\n            \r\n        except Exception as e:\r\n            error_result = {\r\n                'domain_score': 50,\r\n                'domain_flags': [f\"⚠️ Error in domain validation: {str(e)}\"]\r\n            }\r\n            return Message(text=json.dumps(error_result))\r\n    \r\n    # ═══════════════════════════════════════════\r\n    # URL CHECKING FUNCTION (THE MAGIC PART)\r\n    # ═══════════════════════════════════════════\r\n    def check_url(self, url: str, trusted_domains: list) -> tuple:\r\n        \"\"\"\r\n        Actually visits the URL and analyzes the page\r\n        Returns: (score_adjustment, flags_list)\r\n        \"\"\"\r\n        score = 0\r\n        flags = []\r\n        \r\n        try:\r\n            # Set timeout to avoid hanging\r\n            headers = {\r\n                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'\r\n            }\r\n            \r\n            response = requests.get(url, timeout=5, headers=headers, allow_redirects=True)\r\n            \r\n            # ═══════════════════════════════════════════\r\n            # CHECK 1: HTTP Status Code\r\n            # ═══════════════════════════════════════════\r\n            if response.status_code == 200:\r\n                flags.append(f\"✅ URL is accessible: {urlparse(url).netloc}\")\r\n            elif response.status_code == 404:\r\n                score += 40\r\n                flags.append(f\"🚨 URL not found (404): {url}\")\r\n                return (score, flags)\r\n            else:\r\n                score += 20\r\n                flags.append(f\"⚠️ URL returned status {response.status_code}\")\r\n            \r\n            # ═══════════════════════════════════════════\r\n            # CHECK 2: HTTPS (Secure Connection)\r\n            # ═══════════════════════════════════════════\r\n            if url.startswith('https://'):\r\n                score -= 5\r\n                flags.append(\"✅ Uses secure HTTPS\")\r\n            else:\r\n                score += 15\r\n                flags.append(\"🚩 No HTTPS encryption\")\r\n            \r\n            # ═══════════════════════════════════════════\r\n            # CHECK 3: Trusted Platform\r\n            # ═══════════════════════════════════════════\r\n            domain = urlparse(url).netloc.lower()\r\n            is_trusted = any(trusted in domain for trusted in trusted_domains)\r\n            \r\n            if is_trusted:\r\n                score -= 30\r\n                flags.append(f\"✅ Posted on trusted platform: {domain}\")\r\n            else:\r\n                score += 15\r\n                flags.append(f\"⚠️ Unknown platform: {domain}\")\r\n            \r\n            # ═══════════════════════════════════════════\r\n            # CHECK 4: Parse HTML Content\r\n            # ═══════════════════════════════════════════\r\n            soup = BeautifulSoup(response.text, 'html.parser')\r\n            \r\n            # Check for job-related meta tags\r\n            og_type = soup.find('meta', property='og:type')\r\n            if og_type and 'job' in og_type.get('content', '').lower():\r\n                score -= 15\r\n                flags.append(\"✅ Confirmed job posting page\")\r\n            \r\n            # Check for job schema markup\r\n            job_schema = soup.find('script', type='application/ld+json')\r\n            if job_schema and 'JobPosting' in job_schema.string:\r\n                score -= 10\r\n                flags.append(\"✅ Contains structured job data\")\r\n            \r\n            # ═══════════════════════════════════════════\r\n            # CHECK 5: Content Analysis\r\n            # ═══════════════════════════════════════════\r\n            page_text = soup.get_text().lower()\r\n            \r\n            # Look for job-related keywords\r\n            job_keywords = ['salary', 'requirements', 'qualifications', \r\n                           'experience', 'apply now', 'job description']\r\n            keyword_count = sum(1 for keyword in job_keywords if keyword in page_text)\r\n            \r\n            if keyword_count >= 4:\r\n                score -= 10\r\n                flags.append(f\"✅ Page contains job details ({keyword_count}/6 keywords)\")\r\n            elif keyword_count < 2:\r\n                score += 10\r\n                flags.append(\"⚠️ Page lacks proper job description\")\r\n            \r\n            # Check for scam indicators on page\r\n            scam_indicators = ['registration fee', 'processing fee', 'security deposit',\r\n                              'immediate joining', 'urgent hiring', 'limited slots']\r\n            scam_count = sum(1 for indicator in scam_indicators if indicator in page_text)\r\n            \r\n            if scam_count >= 2:\r\n                score += 20\r\n                flags.append(f\"🚨 Page contains {scam_count} scam indicators\")\r\n            \r\n            # ═══════════════════════════════════════════\r\n            # CHECK 6: Redirects (Suspicious)\r\n            # ═══════════════════════════════════════════\r\n            if len(response.history) > 2:\r\n                score += 15\r\n                flags.append(f\"⚠️ Multiple redirects detected ({len(response.history)})\")\r\n            \r\n            return (score, flags)\r\n            \r\n        except requests.exceptions.Timeout:\r\n            return (25, [f\"⚠️ URL timed out (slow/suspicious): {url}\"])\r\n        \r\n        except requests.exceptions.SSLError:\r\n            return (30, [f\"🚨 SSL certificate error: {url}\"])\r\n        \r\n        except requests.exceptions.ConnectionError:\r\n            return (35, [f\"🚨 Could not connect to URL: {url}\"])\r\n        \r\n        except Exception as e:\r\n            return (20, [f\"⚠️ Error checking URL: {str(e)[:50]}\"])\r\n"
+              },
+              "text_input": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Text to Analyze",
+                "dynamic": false,
+                "info": "Job posting text with URLs",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "text_input",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "EnhancedDomainValidator"
+        },
+        "dragging": false,
+        "id": "CustomComponent-nNYta",
+        "measured": {
+          "height": 219,
+          "width": 320
+        },
+        "position": {
+          "x": 441.0127230686426,
+          "y": 521.8949501910066
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "CustomComponent-Ldo1N",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Dynamic weighted scoring based on confidence",
+            "display_name": "Score Combiner",
+            "documentation": "",
+            "edited": true,
+            "field_order": [
+              "heuristic_result",
+              "domain_result",
+              "llm_result"
+            ],
+            "frozen": false,
+            "legacy": false,
+            "lf_version": "1.6.7",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Final Result",
+                "group_outputs": false,
+                "hidden": null,
+                "method": "combine",
+                "name": "output",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.custom import Component\r\nfrom langflow.io import MessageTextInput, Output\r\nfrom langflow.schema.message import Message\r\nimport json\r\n\r\n\r\nclass SmartScoreCombiner(Component):\r\n    display_name = \"Smart Score Combiner\"\r\n    description = \"Dynamic weighted scoring based on confidence\"\r\n    \r\n    inputs = [\r\n        MessageTextInput(name=\"heuristic_result\", display_name=\"Heuristic Result\"),\r\n        MessageTextInput(name=\"domain_result\", display_name=\"Domain Result\"),\r\n        MessageTextInput(name=\"llm_result\", display_name=\"LLM Result\")\r\n    ]\r\n    \r\n    outputs = [\r\n        Output(display_name=\"Final Result\", name=\"output\", method=\"combine\")\r\n    ]\r\n    \r\n    def combine(self) -> Message:\r\n        # Parse inputs\r\n        heuristic = json.loads(self.heuristic_result)\r\n        domain = json.loads(self.domain_result)\r\n        llm = json.loads(self.llm_result)\r\n        \r\n        h_score = heuristic.get('heuristic_score', 0)\r\n        d_score = domain.get('domain_score', 0)\r\n        l_score = llm.get('llm_score', 0)\r\n        \r\n        # ═══════════════════════════════════════════\r\n        # DYNAMIC WEIGHTING (NEW!)\r\n        # ═══════════════════════════════════════════\r\n        \r\n        # If heuristic finds critical flags, trust it more\r\n        critical_flags = len([f for f in heuristic.get('heuristic_flags', []) \r\n                             if '🚨' in f])\r\n        \r\n        if critical_flags >= 2:\r\n            # Obvious scam - trust heuristics more\r\n            weights = {'h': 0.50, 'd': 0.25, 'l': 0.25}\r\n        elif d_score > 70:\r\n            # Domain issues - trust domain check more\r\n            weights = {'h': 0.25, 'd': 0.50, 'l': 0.25}\r\n        else:\r\n            # Normal case - trust LLM more\r\n            weights = {'h': 0.30, 'd': 0.30, 'l': 0.40}\r\n        \r\n        final_score = (\r\n            h_score * weights['h'] +\r\n            d_score * weights['d'] +\r\n            l_score * weights['l']\r\n        )\r\n        \r\n        final_score = round(final_score)\r\n        \r\n        # ═══════════════════════════════════════════\r\n        # SMART VERDICT (NEW!)\r\n        # ═══════════════════════════════════════════\r\n        \r\n        # If all three agree (within 20 points), high confidence\r\n        scores = [h_score, d_score, l_score]\r\n        score_range = max(scores) - min(scores)\r\n        \r\n        if score_range < 20:\r\n            confidence = \"High\"\r\n        elif score_range < 40:\r\n            confidence = \"Medium\"\r\n        else:\r\n            confidence = \"Low\"\r\n        \r\n        # Determine verdict\r\n        if final_score <= 25:\r\n            verdict = \"SAFE\"\r\n            risk_level = \"Low Risk\"\r\n            color = \"green\"\r\n        elif final_score <= 60:\r\n            verdict = \"SUSPICIOUS\"\r\n            risk_level = \"Medium Risk\"\r\n            color = \"yellow\"\r\n        else:\r\n            verdict = \"SCAM\"\r\n            risk_level = \"High Risk\"\r\n            color = \"red\"\r\n        \r\n        # ═══════════════════════════════════════════\r\n        # SMART RECOMMENDATIONS (NEW!)\r\n        # ═══════════════════════════════════════════\r\n        \r\n        if final_score <= 25:\r\n            next_steps = [\r\n                \"✅ Verify company on official website\",\r\n                \"✅ Read employee reviews on Glassdoor\",\r\n                \"✅ Check if job is on company's career page\",\r\n                \"✅ Proceed with standard application\"\r\n            ]\r\n        elif final_score <= 60:\r\n            next_steps = [\r\n                \"⚠️ DO NOT share personal documents yet\",\r\n                \"⚠️ Verify company registration (MCA database)\",\r\n                \"⚠️ Request interview on official platform\",\r\n                \"⚠️ Ask for official company email\",\r\n                \"⚠️ Check company address on Google Maps\"\r\n            ]\r\n        else:\r\n            next_steps = [\r\n                \"🚨 DO NOT ENGAGE with this posting\",\r\n                \"🚨 DO NOT send money or documents\",\r\n                \"🚨 Report to cybercrime.gov.in\",\r\n                \"🚨 Block contact immediately\",\r\n                \"🚨 Warn others in your network\"\r\n            ]\r\n        \r\n        # Combine all flags\r\n        all_flags = (\r\n            heuristic.get('heuristic_flags', []) +\r\n            domain.get('domain_flags', []) +\r\n            llm.get('top_reasons', [])\r\n        )\r\n        \r\n        result = {\r\n            'final_score': final_score,\r\n            'final_verdict': verdict,\r\n            'risk_level': risk_level,\r\n            'color': color,\r\n            'confidence': confidence,  # NEW!\r\n            'breakdown': {\r\n                'heuristic': h_score,\r\n                'domain': d_score,\r\n                'llm': l_score\r\n            },\r\n            'weights_used': weights,  # NEW!\r\n            'heuristic_flags': heuristic.get('heuristic_flags', []),\r\n            'domain_flags': domain.get('domain_flags', []),\r\n            'top_reasons': llm.get('top_reasons', []),\r\n            'explain_brief': llm.get('explain_brief', ''),\r\n            'next_steps': next_steps,\r\n            'all_flags': list(set(all_flags))[:8]  # Top 8 unique flags\r\n        }\r\n        \r\n        return Message(text=json.dumps(result))\r\n"
+              },
+              "domain_result": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Domain Result",
+                "dynamic": false,
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "domain_result",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "heuristic_result": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Heuristic Result",
+                "dynamic": false,
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "heuristic_result",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "llm_result": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "LLM Result",
+                "dynamic": false,
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "llm_result",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "SmartScoreCombiner"
+        },
+        "dragging": false,
+        "id": "CustomComponent-Ldo1N",
+        "measured": {
+          "height": 369,
+          "width": 320
+        },
+        "position": {
+          "x": 1181.8918506496098,
+          "y": 422.161760899789
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "CustomComponent-N483a",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Enhanced pattern detection with 50+ scam indicators",
+            "display_name": "Heuristic Scorer",
+            "documentation": "",
+            "edited": true,
+            "field_order": [
+              "text_input"
+            ],
+            "frozen": false,
+            "legacy": false,
+            "lf_version": "1.6.7",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Heuristic Result",
+                "group_outputs": false,
+                "hidden": null,
+                "method": "analyze",
+                "name": "output",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.custom import Component\r\nfrom langflow.io import MessageTextInput, Output\r\nfrom langflow.schema.message import Message\r\nimport re\r\nimport json\r\n\r\n\r\nclass AdvancedHeuristicScorer(Component):\r\n    display_name = \"Advanced Heuristic Scorer\"\r\n    description = \"Enhanced pattern detection with 50+ scam indicators\"\r\n    \r\n    inputs = [\r\n        MessageTextInput(\r\n            name=\"text_input\",\r\n            display_name=\"Text to Analyze\",\r\n            info=\"Job posting text\"\r\n        )\r\n    ]\r\n    \r\n    outputs = [\r\n        Output(display_name=\"Heuristic Result\", name=\"output\", method=\"analyze\")\r\n    ]\r\n    \r\n    def analyze(self) -> Message:\r\n        text = self.text_input.lower()\r\n        score = 0\r\n        flags = []\r\n        \r\n        # ═══════════════════════════════════════════\r\n        # CRITICAL RED FLAGS (30+ points each)\r\n        # ═══════════════════════════════════════════\r\n        critical_patterns = {\r\n            'registration fee': 35,\r\n            'processing fee': 35,\r\n            'security deposit': 35,\r\n            'pay for training': 35,\r\n            'investment required': 40,\r\n            'send money': 40,\r\n            'western union': 45,\r\n            'gift card': 45,\r\n            'bitcoin': 40,\r\n            'cryptocurrency': 40\r\n        }\r\n        \r\n        for pattern, points in critical_patterns.items():\r\n            if pattern in text:\r\n                score += points\r\n                flags.append(f\"🚨 CRITICAL: '{pattern}' detected\")\r\n        \r\n        # ═══════════════════════════════════════════\r\n        # HIGH-RISK INDICATORS (20-25 points)\r\n        # ═══════════════════════════════════════════\r\n        high_risk = {\r\n            'urgent hiring': 25,\r\n            'limited slots': 25,\r\n            'act fast': 25,\r\n            'immediate joining': 25,\r\n            'first come first serve': 25,\r\n            'telegram': 20,\r\n            'whatsapp only': 25,\r\n            'no experience needed': 15,\r\n            'work from home': 10,\r\n            'earn daily': 25,\r\n            'guaranteed income': 30,\r\n            'easy money': 30\r\n        }\r\n        \r\n        for pattern, points in high_risk.items():\r\n            if pattern in text:\r\n                score += points\r\n                flags.append(f\"⚠️ High Risk: '{pattern}'\")\r\n        \r\n        # ═══════════════════════════════════════════\r\n        # SALARY REALITY CHECK (NEW!)\r\n        # ═══════════════════════════════════════════\r\n        \r\n        # Daily salary check\r\n        daily_salary = re.findall(r'₹?\\s*(\\d+(?:,\\d+)*)\\s*(?:daily|per day|/day)', text)\r\n        for match in daily_salary:\r\n            amount = int(match.replace(',', ''))\r\n            if amount > 3000:  # ₹3k+ daily = ₹90k+ monthly\r\n                score += 30\r\n                flags.append(f\"💰 Unrealistic daily salary: ₹{amount:,}/day\")\r\n            elif amount > 5000:\r\n                score += 40\r\n                flags.append(f\"🚨 EXTREME: ₹{amount:,}/day (impossible)\")\r\n        \r\n        # Monthly/Annual salary check\r\n        monthly_salary = re.findall(r'₹?\\s*(\\d+(?:,\\d+)*)\\s*(?:lpa|per annum|/year)', text)\r\n        for match in monthly_salary:\r\n            amount = int(match.replace(',', ''))\r\n            if amount > 5000000:  # 50L+ for entry-level\r\n                score += 25\r\n                flags.append(f\"⚠️ Extremely high salary: ₹{amount:,} LPA\")\r\n        \r\n        # ═══════════════════════════════════════════\r\n        # PHONE NUMBER PATTERNS (NEW!)\r\n        # ═══════════════════════════════════════════\r\n        phone_pattern = r'(?:\\+91|0)?[6-9]\\d{9}'\r\n        phones = re.findall(phone_pattern, text)\r\n        \r\n        if len(phones) > 2:\r\n            score += 20\r\n            flags.append(f\"📱 Multiple phone numbers ({len(phones)})\")\r\n        \r\n        # Check for international numbers (scam indicator)\r\n        intl_phones = re.findall(r'\\+(?!91)\\d{1,3}\\d{7,}', text)\r\n        if intl_phones:\r\n            score += 30\r\n            flags.append(f\"🌍 International phone number detected\")\r\n        \r\n        # ═══════════════════════════════════════════\r\n        # EMAIL PATTERNS (NEW!)\r\n        # ═══════════════════════════════════════════\r\n        emails = re.findall(r'[\\w\\.-]+@([\\w\\.-]+)', text)\r\n        \r\n        suspicious_emails = ['gmail.com', 'yahoo.com', 'hotmail.com', \r\n                            'outlook.com', 'rediffmail.com']\r\n        \r\n        for domain in emails:\r\n            if domain.lower() in suspicious_emails:\r\n                score += 15\r\n                flags.append(f\"📧 Generic email domain: {domain}\")\r\n        \r\n        # ═══════════════════════════════════════════\r\n        # GRAMMAR & SPELLING ISSUES (NEW!)\r\n        # ═══════════════════════════════════════════\r\n        grammar_issues = [\r\n            'cant', 'wont', 'dont',  # Missing apostrophes\r\n            'pls', 'plz', 'msg',     # Abbreviations\r\n            'dm me', 'inbox me'       # Unprofessional\r\n        ]\r\n        \r\n        grammar_count = sum(1 for issue in grammar_issues if issue in text)\r\n        if grammar_count >= 2:\r\n            score += 15\r\n            flags.append(f\"✍️ Poor grammar/spelling ({grammar_count} issues)\")\r\n        \r\n        # ═══════════════════════════════════════════\r\n        # MISSING CRITICAL INFO (NEW!)\r\n        # ═══════════════════════════════════════════\r\n        required_fields = {\r\n            'company name': ['company:', 'organization:', 'employer:'],\r\n            'job title': ['position:', 'role:', 'job title:'],\r\n            'location': ['location:', 'city:', 'office:'],\r\n            'qualifications': ['qualification', 'education', 'degree']\r\n        }\r\n        \r\n        missing_count = 0\r\n        for field, keywords in required_fields.items():\r\n            if not any(keyword in text for keyword in keywords):\r\n                missing_count += 1\r\n        \r\n        if missing_count >= 3:\r\n            score += 20\r\n            flags.append(f\"📋 Missing {missing_count} critical details\")\r\n        \r\n        # ═══════════════════════════════════════════\r\n        # EMOTIONAL MANIPULATION (NEW!)\r\n        # ═══════════════════════════════════════════\r\n        manipulation_words = [\r\n            'amazing opportunity', 'once in lifetime', \r\n            'exclusive offer', 'secret method',\r\n            'financial freedom', 'be your own boss',\r\n            'passive income', 'get rich'\r\n        ]\r\n        \r\n        manipulation_count = sum(1 for word in manipulation_words if word in text)\r\n        if manipulation_count >= 2:\r\n            score += 20\r\n            flags.append(f\"🎭 Emotional manipulation tactics detected\")\r\n        \r\n        # ═══════════════════════════════════════════\r\n        # CAPS LOCK ABUSE (NEW!)\r\n        # ═══════════════════════════════════════════\r\n        caps_words = [word for word in text.split() if word.isupper() and len(word) > 3]\r\n        if len(caps_words) > 5:\r\n            score += 15\r\n            flags.append(f\"📢 Excessive CAPS ({len(caps_words)} words)\")\r\n        \r\n        # ═══════════════════════════════════════════\r\n        # FINAL SCORE CAPPING\r\n        # ═══════════════════════════════════════════\r\n        score = min(score, 100)\r\n        \r\n        result = {\r\n            'heuristic_score': score,\r\n            'heuristic_flags': flags[:10]  # Limit to 10 flags\r\n        }\r\n        \r\n        return Message(text=json.dumps(result))\r\n"
+              },
+              "text_input": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Text to Analyze",
+                "dynamic": false,
+                "info": "Job posting text",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "text_input",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "AdvancedHeuristicScorer"
+        },
+        "dragging": false,
+        "id": "CustomComponent-N483a",
+        "measured": {
+          "height": 219,
+          "width": 320
+        },
+        "position": {
+          "x": 435.7802659311817,
+          "y": 176.6706260155851
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "ChatOutput-CCdEx",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Display a chat message in the Playground.",
+            "display_name": "Chat Output",
+            "documentation": "https://docs.langflow.org/components-io#chat-output",
+            "edited": false,
+            "field_order": [
+              "input_value",
+              "should_store_message",
+              "sender",
+              "sender_name",
+              "session_id",
+              "data_template"
+            ],
+            "frozen": false,
+            "icon": "MessagesSquare",
+            "legacy": false,
+            "lf_version": "1.6.7",
+            "metadata": {},
+            "minimized": true,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Output Message",
+                "group_outputs": false,
+                "method": "message_response",
+                "name": "message",
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from collections.abc import Generator\nfrom typing import Any\n\nimport orjson\nfrom fastapi.encoders import jsonable_encoder\n\nfrom langflow.base.io.chat import ChatComponent\nfrom langflow.helpers.data import safe_convert\nfrom langflow.inputs.inputs import BoolInput, DropdownInput, HandleInput, MessageTextInput\nfrom langflow.schema.data import Data\nfrom langflow.schema.dataframe import DataFrame\nfrom langflow.schema.message import Message\nfrom langflow.schema.properties import Source\nfrom langflow.template.field.base import Output\nfrom langflow.utils.constants import (\n    MESSAGE_SENDER_AI,\n    MESSAGE_SENDER_NAME_AI,\n    MESSAGE_SENDER_USER,\n)\n\n\nclass ChatOutput(ChatComponent):\n    display_name = \"Chat Output\"\n    description = \"Display a chat message in the Playground.\"\n    documentation: str = \"https://docs.langflow.org/components-io#chat-output\"\n    icon = \"MessagesSquare\"\n    name = \"ChatOutput\"\n    minimized = True\n\n    inputs = [\n        HandleInput(\n            name=\"input_value\",\n            display_name=\"Inputs\",\n            info=\"Message to be passed as output.\",\n            input_types=[\"Data\", \"DataFrame\", \"Message\"],\n            required=True,\n        ),\n        BoolInput(\n            name=\"should_store_message\",\n            display_name=\"Store Messages\",\n            info=\"Store the message in the history.\",\n            value=True,\n            advanced=True,\n        ),\n        DropdownInput(\n            name=\"sender\",\n            display_name=\"Sender Type\",\n            options=[MESSAGE_SENDER_AI, MESSAGE_SENDER_USER],\n            value=MESSAGE_SENDER_AI,\n            advanced=True,\n            info=\"Type of sender.\",\n        ),\n        MessageTextInput(\n            name=\"sender_name\",\n            display_name=\"Sender Name\",\n            info=\"Name of the sender.\",\n            value=MESSAGE_SENDER_NAME_AI,\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"session_id\",\n            display_name=\"Session ID\",\n            info=\"The session ID of the chat. If empty, the current session ID parameter will be used.\",\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"data_template\",\n            display_name=\"Data Template\",\n            value=\"{text}\",\n            advanced=True,\n            info=\"Template to convert Data to Text. If left empty, it will be dynamically set to the Data's text key.\",\n        ),\n    ]\n    outputs = [\n        Output(\n            display_name=\"Output Message\",\n            name=\"message\",\n            method=\"message_response\",\n        ),\n    ]\n\n    def _build_source(self, id_: str | None, display_name: str | None, source: str | None) -> Source:\n        source_dict = {}\n        if id_:\n            source_dict[\"id\"] = id_\n        if display_name:\n            source_dict[\"display_name\"] = display_name\n        if source:\n            # Handle case where source is a ChatOpenAI object\n            if hasattr(source, \"model_name\"):\n                source_dict[\"source\"] = source.model_name\n            elif hasattr(source, \"model\"):\n                source_dict[\"source\"] = str(source.model)\n            else:\n                source_dict[\"source\"] = str(source)\n        return Source(**source_dict)\n\n    async def message_response(self) -> Message:\n        # First convert the input to string if needed\n        text = self.convert_to_string()\n\n        # Get source properties\n        source, _icon, display_name, source_id = self.get_properties_from_source_component()\n\n        # Create or use existing Message object\n        if isinstance(self.input_value, Message):\n            message = self.input_value\n            # Update message properties\n            message.text = text\n        else:\n            message = Message(text=text)\n\n        # Set message properties\n        message.sender = self.sender\n        message.sender_name = self.sender_name\n        message.session_id = self.session_id\n        message.flow_id = self.graph.flow_id if hasattr(self, \"graph\") else None\n        message.properties.source = self._build_source(source_id, display_name, source)\n\n        # Store message if needed\n        if self.session_id and self.should_store_message:\n            stored_message = await self.send_message(message)\n            self.message.value = stored_message\n            message = stored_message\n\n        self.status = message\n        return message\n\n    def _serialize_data(self, data: Data) -> str:\n        \"\"\"Serialize Data object to JSON string.\"\"\"\n        # Convert data.data to JSON-serializable format\n        serializable_data = jsonable_encoder(data.data)\n        # Serialize with orjson, enabling pretty printing with indentation\n        json_bytes = orjson.dumps(serializable_data, option=orjson.OPT_INDENT_2)\n        # Convert bytes to string and wrap in Markdown code blocks\n        return \"```json\\n\" + json_bytes.decode(\"utf-8\") + \"\\n```\"\n\n    def _validate_input(self) -> None:\n        \"\"\"Validate the input data and raise ValueError if invalid.\"\"\"\n        if self.input_value is None:\n            msg = \"Input data cannot be None\"\n            raise ValueError(msg)\n        if isinstance(self.input_value, list) and not all(\n            isinstance(item, Message | Data | DataFrame | str) for item in self.input_value\n        ):\n            invalid_types = [\n                type(item).__name__\n                for item in self.input_value\n                if not isinstance(item, Message | Data | DataFrame | str)\n            ]\n            msg = f\"Expected Data or DataFrame or Message or str, got {invalid_types}\"\n            raise TypeError(msg)\n        if not isinstance(\n            self.input_value,\n            Message | Data | DataFrame | str | list | Generator | type(None),\n        ):\n            type_name = type(self.input_value).__name__\n            msg = f\"Expected Data or DataFrame or Message or str, Generator or None, got {type_name}\"\n            raise TypeError(msg)\n\n    def convert_to_string(self) -> str | Generator[Any, None, None]:\n        \"\"\"Convert input data to string with proper error handling.\"\"\"\n        self._validate_input()\n        if isinstance(self.input_value, list):\n            clean_data: bool = getattr(self, \"clean_data\", False)\n            return \"\\n\".join([safe_convert(item, clean_data=clean_data) for item in self.input_value])\n        if isinstance(self.input_value, Generator):\n            return self.input_value\n        return safe_convert(self.input_value)\n"
+              },
+              "data_template": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Data Template",
+                "dynamic": false,
+                "info": "Template to convert Data to Text. If left empty, it will be dynamically set to the Data's text key.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "data_template",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "{text}"
+              },
+              "input_value": {
+                "_input_type": "HandleInput",
+                "advanced": false,
+                "display_name": "Inputs",
+                "dynamic": false,
+                "info": "Message to be passed as output.",
+                "input_types": [
+                  "Data",
+                  "DataFrame",
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "input_value",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "other",
+                "value": ""
+              },
+              "sender": {
+                "_input_type": "DropdownInput",
+                "advanced": true,
+                "combobox": false,
+                "dialog_inputs": {},
+                "display_name": "Sender Type",
+                "dynamic": false,
+                "external_options": {},
+                "info": "Type of sender.",
+                "name": "sender",
+                "options": [
+                  "Machine",
+                  "User"
+                ],
+                "options_metadata": [],
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "Machine"
+              },
+              "sender_name": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Sender Name",
+                "dynamic": false,
+                "info": "Name of the sender.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "sender_name",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "AI"
+              },
+              "session_id": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Session ID",
+                "dynamic": false,
+                "info": "The session ID of the chat. If empty, the current session ID parameter will be used.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "session_id",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "should_store_message": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "Store Messages",
+                "dynamic": false,
+                "info": "Store the message in the history.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "should_store_message",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": true
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": false,
+          "type": "ChatOutput"
+        },
+        "dragging": false,
+        "id": "ChatOutput-CCdEx",
+        "measured": {
+          "height": 48,
+          "width": 192
+        },
+        "position": {
+          "x": 2325.6115255185537,
+          "y": 665.7297404646175
+        },
+        "selected": true,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "OpenRouterComponent-o4xaY",
+          "node": {
+            "base_classes": [
+              "LanguageModel",
+              "Message"
+            ],
+            "beta": false,
+            "category": "openrouter",
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "OpenRouter provides unified access to multiple AI models from different providers through a single API.",
+            "display_name": "OpenRouter",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "input_value",
+              "system_message",
+              "stream",
+              "api_key",
+              "site_url",
+              "app_name",
+              "provider",
+              "model_name",
+              "temperature",
+              "max_tokens"
+            ],
+            "frozen": false,
+            "icon": "OpenRouter",
+            "key": "OpenRouterComponent",
+            "last_updated": "2025-11-16T06:17:42.544Z",
+            "legacy": false,
+            "lf_version": "1.6.7",
+            "metadata": {
+              "keywords": [
+                "model",
+                "llm",
+                "language model",
+                "large language model"
+              ]
+            },
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Model Response",
+                "group_outputs": false,
+                "method": "text_response",
+                "name": "text_output",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Language Model",
+                "group_outputs": false,
+                "method": "build_model",
+                "name": "model_output",
+                "options": null,
+                "required_inputs": null,
+                "selected": "LanguageModel",
+                "tool_mode": true,
+                "types": [
+                  "LanguageModel"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "score": 0.01749582703698622,
+            "template": {
+              "_type": "Component",
+              "api_key": {
+                "_input_type": "SecretStrInput",
+                "advanced": false,
+                "display_name": "OpenRouter API Key",
+                "dynamic": false,
+                "info": "Your OpenRouter API key",
+                "input_types": [],
+                "load_from_db": false,
+                "name": "api_key",
+                "password": true,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "str",
+                "value": ""
+              },
+              "app_name": {
+                "_input_type": "StrInput",
+                "advanced": true,
+                "display_name": "App Name",
+                "dynamic": false,
+                "info": "Your app name for OpenRouter rankings",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "app_name",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from collections import defaultdict\nfrom typing import Any\n\nimport httpx\nfrom langchain_openai import ChatOpenAI\nfrom pydantic.v1 import SecretStr\n\nfrom langflow.base.models.model import LCModelComponent\nfrom langflow.field_typing import LanguageModel\nfrom langflow.field_typing.range_spec import RangeSpec\nfrom langflow.inputs.inputs import (\n    DropdownInput,\n    IntInput,\n    SecretStrInput,\n    SliderInput,\n    StrInput,\n)\n\n\nclass OpenRouterComponent(LCModelComponent):\n    \"\"\"OpenRouter API component for language models.\"\"\"\n\n    display_name = \"OpenRouter\"\n    description = (\n        \"OpenRouter provides unified access to multiple AI models from different providers through a single API.\"\n    )\n    icon = \"OpenRouter\"\n\n    inputs = [\n        *LCModelComponent._base_inputs,\n        SecretStrInput(\n            name=\"api_key\", display_name=\"OpenRouter API Key\", required=True, info=\"Your OpenRouter API key\"\n        ),\n        StrInput(\n            name=\"site_url\",\n            display_name=\"Site URL\",\n            info=\"Your site URL for OpenRouter rankings\",\n            advanced=True,\n        ),\n        StrInput(\n            name=\"app_name\",\n            display_name=\"App Name\",\n            info=\"Your app name for OpenRouter rankings\",\n            advanced=True,\n        ),\n        DropdownInput(\n            name=\"provider\",\n            display_name=\"Provider\",\n            info=\"The AI model provider\",\n            options=[\"Loading providers...\"],\n            value=\"Loading providers...\",\n            real_time_refresh=True,\n            required=True,\n        ),\n        DropdownInput(\n            name=\"model_name\",\n            display_name=\"Model\",\n            info=\"The model to use for chat completion\",\n            options=[\"Select a provider first\"],\n            value=\"Select a provider first\",\n            real_time_refresh=True,\n            required=True,\n        ),\n        SliderInput(\n            name=\"temperature\",\n            display_name=\"Temperature\",\n            value=0.7,\n            range_spec=RangeSpec(min=0, max=2, step=0.01),\n            info=\"Controls randomness. Lower values are more deterministic, higher values are more creative.\",\n            advanced=True,\n        ),\n        IntInput(\n            name=\"max_tokens\",\n            display_name=\"Max Tokens\",\n            info=\"Maximum number of tokens to generate\",\n            advanced=True,\n        ),\n    ]\n\n    def fetch_models(self) -> dict[str, list]:\n        \"\"\"Fetch available models from OpenRouter API and organize them by provider.\"\"\"\n        url = \"https://openrouter.ai/api/v1/models\"\n\n        try:\n            with httpx.Client() as client:\n                response = client.get(url)\n                response.raise_for_status()\n\n                models_data = response.json().get(\"data\", [])\n                provider_models = defaultdict(list)\n\n                for model in models_data:\n                    model_id = model.get(\"id\", \"\")\n                    if \"/\" in model_id:\n                        provider = model_id.split(\"/\")[0].title()\n                        provider_models[provider].append(\n                            {\n                                \"id\": model_id,\n                                \"name\": model.get(\"name\", \"\"),\n                                \"description\": model.get(\"description\", \"\"),\n                                \"context_length\": model.get(\"context_length\", 0),\n                            }\n                        )\n\n                return dict(provider_models)\n\n        except httpx.HTTPError as e:\n            self.log(f\"Error fetching models: {e!s}\")\n            return {\"Error\": [{\"id\": \"error\", \"name\": f\"Error fetching models: {e!s}\"}]}\n\n    def build_model(self) -> LanguageModel:\n        \"\"\"Build and return the OpenRouter language model.\"\"\"\n        model_not_selected = \"Please select a model\"\n        api_key_required = \"API key is required\"\n\n        if not self.model_name or self.model_name == \"Select a provider first\":\n            raise ValueError(model_not_selected)\n\n        if not self.api_key:\n            raise ValueError(api_key_required)\n\n        api_key = SecretStr(self.api_key).get_secret_value()\n\n        # Build base configuration\n        kwargs: dict[str, Any] = {\n            \"model\": self.model_name,\n            \"openai_api_key\": api_key,\n            \"openai_api_base\": \"https://openrouter.ai/api/v1\",\n            \"temperature\": self.temperature if self.temperature is not None else 0.7,\n        }\n\n        # Add optional parameters\n        if self.max_tokens:\n            kwargs[\"max_tokens\"] = self.max_tokens\n\n        headers = {}\n        if self.site_url:\n            headers[\"HTTP-Referer\"] = self.site_url\n        if self.app_name:\n            headers[\"X-Title\"] = self.app_name\n\n        if headers:\n            kwargs[\"default_headers\"] = headers\n\n        try:\n            return ChatOpenAI(**kwargs)\n        except (ValueError, httpx.HTTPError) as err:\n            error_msg = f\"Failed to build model: {err!s}\"\n            self.log(error_msg)\n            raise ValueError(error_msg) from err\n\n    def _get_exception_message(self, e: Exception) -> str | None:\n        \"\"\"Get a message from an OpenRouter exception.\n\n        Args:\n            e (Exception): The exception to get the message from.\n\n        Returns:\n            str | None: The message from the exception, or None if no specific message can be extracted.\n        \"\"\"\n        try:\n            from openai import BadRequestError\n\n            if isinstance(e, BadRequestError):\n                message = e.body.get(\"message\")\n                if message:\n                    return message\n        except ImportError:\n            pass\n        return None\n\n    def update_build_config(self, build_config: dict, field_value: str, field_name: str | None = None) -> dict:\n        \"\"\"Update build configuration based on field updates.\"\"\"\n        try:\n            if field_name is None or field_name == \"provider\":\n                provider_models = self.fetch_models()\n                build_config[\"provider\"][\"options\"] = sorted(provider_models.keys())\n                if build_config[\"provider\"][\"value\"] not in provider_models:\n                    build_config[\"provider\"][\"value\"] = build_config[\"provider\"][\"options\"][0]\n\n            if field_name == \"provider\" and field_value in self.fetch_models():\n                provider_models = self.fetch_models()\n                models = provider_models[field_value]\n\n                build_config[\"model_name\"][\"options\"] = [model[\"id\"] for model in models]\n                if models:\n                    build_config[\"model_name\"][\"value\"] = models[0][\"id\"]\n\n                tooltips = {\n                    model[\"id\"]: (f\"{model['name']}\\nContext Length: {model['context_length']}\\n{model['description']}\")\n                    for model in models\n                }\n                build_config[\"model_name\"][\"tooltips\"] = tooltips\n\n        except httpx.HTTPError as e:\n            self.log(f\"Error updating build config: {e!s}\")\n            build_config[\"provider\"][\"options\"] = [\"Error loading providers\"]\n            build_config[\"provider\"][\"value\"] = \"Error loading providers\"\n            build_config[\"model_name\"][\"options\"] = [\"Error loading models\"]\n            build_config[\"model_name\"][\"value\"] = \"Error loading models\"\n\n        return build_config\n"
+              },
+              "input_value": {
+                "_input_type": "MessageInput",
+                "advanced": false,
+                "display_name": "Input",
+                "dynamic": false,
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "input_value",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "max_tokens": {
+                "_input_type": "IntInput",
+                "advanced": true,
+                "display_name": "Max Tokens",
+                "dynamic": false,
+                "info": "Maximum number of tokens to generate",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "max_tokens",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": ""
+              },
+              "model_name": {
+                "_input_type": "DropdownInput",
+                "advanced": false,
+                "combobox": false,
+                "dialog_inputs": {},
+                "display_name": "Model",
+                "dynamic": false,
+                "external_options": {},
+                "info": "The model to use for chat completion",
+                "name": "model_name",
+                "options": [
+                  "openai/gpt-5.1",
+                  "openai/gpt-5.1-chat",
+                  "openai/gpt-5.1-codex",
+                  "openai/gpt-5.1-codex-mini",
+                  "openai/gpt-oss-safeguard-20b",
+                  "openai/gpt-5-image-mini",
+                  "openai/gpt-5-image",
+                  "openai/o3-deep-research",
+                  "openai/o4-mini-deep-research",
+                  "openai/gpt-5-pro",
+                  "openai/gpt-5-codex",
+                  "openai/gpt-4o-audio-preview",
+                  "openai/gpt-5-chat",
+                  "openai/gpt-5",
+                  "openai/gpt-5-mini",
+                  "openai/gpt-5-nano",
+                  "openai/gpt-oss-120b",
+                  "openai/gpt-oss-120b:exacto",
+                  "openai/gpt-oss-20b:free",
+                  "openai/gpt-oss-20b",
+                  "openai/o3-pro",
+                  "openai/codex-mini",
+                  "openai/o4-mini-high",
+                  "openai/o3",
+                  "openai/o4-mini",
+                  "openai/gpt-4.1",
+                  "openai/gpt-4.1-mini",
+                  "openai/gpt-4.1-nano",
+                  "openai/o1-pro",
+                  "openai/gpt-4o-mini-search-preview",
+                  "openai/gpt-4o-search-preview",
+                  "openai/o3-mini-high",
+                  "openai/o3-mini",
+                  "openai/o1",
+                  "openai/gpt-4o-2024-11-20",
+                  "openai/chatgpt-4o-latest",
+                  "openai/gpt-4o-2024-08-06",
+                  "openai/gpt-4o-mini-2024-07-18",
+                  "openai/gpt-4o-mini",
+                  "openai/gpt-4o",
+                  "openai/gpt-4o:extended",
+                  "openai/gpt-4o-2024-05-13",
+                  "openai/gpt-4-turbo",
+                  "openai/gpt-4-turbo-preview",
+                  "openai/gpt-3.5-turbo-0613",
+                  "openai/gpt-4-1106-preview",
+                  "openai/gpt-3.5-turbo-instruct",
+                  "openai/gpt-3.5-turbo-16k",
+                  "openai/gpt-4-0314",
+                  "openai/gpt-4",
+                  "openai/gpt-3.5-turbo"
+                ],
+                "options_metadata": [],
+                "placeholder": "",
+                "real_time_refresh": true,
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "tooltips": {
+                  "openai/chatgpt-4o-latest": "OpenAI: ChatGPT-4o\nContext Length: 128000\nOpenAI ChatGPT 4o is continually updated by OpenAI to point to the current version of GPT-4o used by ChatGPT. It therefore differs slightly from the API version of [GPT-4o](/models/openai/gpt-4o) in that it has additional RLHF. It is intended for research and evaluation.\n\nOpenAI notes that this model is not suited for production use-cases as it may be removed or redirected to another model in the future.",
+                  "openai/codex-mini": "OpenAI: Codex Mini\nContext Length: 200000\ncodex-mini-latest is a fine-tuned version of o4-mini specifically for use in Codex CLI. For direct use in the API, we recommend starting with gpt-4.1.",
+                  "openai/gpt-3.5-turbo": "OpenAI: GPT-3.5 Turbo\nContext Length: 16385\nGPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021.",
+                  "openai/gpt-3.5-turbo-0613": "OpenAI: GPT-3.5 Turbo (older v0613)\nContext Length: 4095\nGPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021.",
+                  "openai/gpt-3.5-turbo-16k": "OpenAI: GPT-3.5 Turbo 16k\nContext Length: 16385\nThis model offers four times the context length of gpt-3.5-turbo, allowing it to support approximately 20 pages of text in a single request at a higher cost. Training data: up to Sep 2021.",
+                  "openai/gpt-3.5-turbo-instruct": "OpenAI: GPT-3.5 Turbo Instruct\nContext Length: 4095\nThis model is a variant of GPT-3.5 Turbo tuned for instructional prompts and omitting chat-related optimizations. Training data: up to Sep 2021.",
+                  "openai/gpt-4": "OpenAI: GPT-4\nContext Length: 8191\nOpenAI's flagship model, GPT-4 is a large-scale multimodal language model capable of solving difficult problems with greater accuracy than previous models due to its broader general knowledge and advanced reasoning capabilities. Training data: up to Sep 2021.",
+                  "openai/gpt-4-0314": "OpenAI: GPT-4 (older v0314)\nContext Length: 8191\nGPT-4-0314 is the first version of GPT-4 released, with a context length of 8,192 tokens, and was supported until June 14. Training data: up to Sep 2021.",
+                  "openai/gpt-4-1106-preview": "OpenAI: GPT-4 Turbo (older v1106)\nContext Length: 128000\nThe latest GPT-4 Turbo model with vision capabilities. Vision requests can now use JSON mode and function calling.\n\nTraining data: up to April 2023.",
+                  "openai/gpt-4-turbo": "OpenAI: GPT-4 Turbo\nContext Length: 128000\nThe latest GPT-4 Turbo model with vision capabilities. Vision requests can now use JSON mode and function calling.\n\nTraining data: up to December 2023.",
+                  "openai/gpt-4-turbo-preview": "OpenAI: GPT-4 Turbo Preview\nContext Length: 128000\nThe preview GPT-4 model with improved instruction following, JSON mode, reproducible outputs, parallel function calling, and more. Training data: up to Dec 2023.\n\n**Note:** heavily rate limited by OpenAI while in preview.",
+                  "openai/gpt-4.1": "OpenAI: GPT-4.1\nContext Length: 1047576\nGPT-4.1 is a flagship large language model optimized for advanced instruction following, real-world software engineering, and long-context reasoning. It supports a 1 million token context window and outperforms GPT-4o and GPT-4.5 across coding (54.6% SWE-bench Verified), instruction compliance (87.4% IFEval), and multimodal understanding benchmarks. It is tuned for precise code diffs, agent reliability, and high recall in large document contexts, making it ideal for agents, IDE tooling, and enterprise knowledge retrieval.",
+                  "openai/gpt-4.1-mini": "OpenAI: GPT-4.1 Mini\nContext Length: 1047576\nGPT-4.1 Mini is a mid-sized model delivering performance competitive with GPT-4o at substantially lower latency and cost. It retains a 1 million token context window and scores 45.1% on hard instruction evals, 35.8% on MultiChallenge, and 84.1% on IFEval. Mini also shows strong coding ability (e.g., 31.6% on Aider’s polyglot diff benchmark) and vision understanding, making it suitable for interactive applications with tight performance constraints.",
+                  "openai/gpt-4.1-nano": "OpenAI: GPT-4.1 Nano\nContext Length: 1047576\nFor tasks that demand low latency, GPT‑4.1 nano is the fastest and cheapest model in the GPT-4.1 series. It delivers exceptional performance at a small size with its 1 million token context window, and scores 80.1% on MMLU, 50.3% on GPQA, and 9.8% on Aider polyglot coding – even higher than GPT‑4o mini. It’s ideal for tasks like classification or autocompletion.",
+                  "openai/gpt-4o": "OpenAI: GPT-4o\nContext Length: 128000\nGPT-4o (\"o\" for \"omni\") is OpenAI's latest AI model, supporting both text and image inputs with text outputs. It maintains the intelligence level of [GPT-4 Turbo](/models/openai/gpt-4-turbo) while being twice as fast and 50% more cost-effective. GPT-4o also offers improved performance in processing non-English languages and enhanced visual capabilities.\n\nFor benchmarking against other models, it was briefly called [\"im-also-a-good-gpt2-chatbot\"](https://twitter.com/LiamFedus/status/1790064963966370209)\n\n#multimodal",
+                  "openai/gpt-4o-2024-05-13": "OpenAI: GPT-4o (2024-05-13)\nContext Length: 128000\nGPT-4o (\"o\" for \"omni\") is OpenAI's latest AI model, supporting both text and image inputs with text outputs. It maintains the intelligence level of [GPT-4 Turbo](/models/openai/gpt-4-turbo) while being twice as fast and 50% more cost-effective. GPT-4o also offers improved performance in processing non-English languages and enhanced visual capabilities.\n\nFor benchmarking against other models, it was briefly called [\"im-also-a-good-gpt2-chatbot\"](https://twitter.com/LiamFedus/status/1790064963966370209)\n\n#multimodal",
+                  "openai/gpt-4o-2024-08-06": "OpenAI: GPT-4o (2024-08-06)\nContext Length: 128000\nThe 2024-08-06 version of GPT-4o offers improved performance in structured outputs, with the ability to supply a JSON schema in the respone_format. Read more [here](https://openai.com/index/introducing-structured-outputs-in-the-api/).\n\nGPT-4o (\"o\" for \"omni\") is OpenAI's latest AI model, supporting both text and image inputs with text outputs. It maintains the intelligence level of [GPT-4 Turbo](/models/openai/gpt-4-turbo) while being twice as fast and 50% more cost-effective. GPT-4o also offers improved performance in processing non-English languages and enhanced visual capabilities.\n\nFor benchmarking against other models, it was briefly called [\"im-also-a-good-gpt2-chatbot\"](https://twitter.com/LiamFedus/status/1790064963966370209)",
+                  "openai/gpt-4o-2024-11-20": "OpenAI: GPT-4o (2024-11-20)\nContext Length: 128000\nThe 2024-11-20 version of GPT-4o offers a leveled-up creative writing ability with more natural, engaging, and tailored writing to improve relevance & readability. It’s also better at working with uploaded files, providing deeper insights & more thorough responses.\n\nGPT-4o (\"o\" for \"omni\") is OpenAI's latest AI model, supporting both text and image inputs with text outputs. It maintains the intelligence level of [GPT-4 Turbo](/models/openai/gpt-4-turbo) while being twice as fast and 50% more cost-effective. GPT-4o also offers improved performance in processing non-English languages and enhanced visual capabilities.",
+                  "openai/gpt-4o-audio-preview": "OpenAI: GPT-4o Audio\nContext Length: 128000\nThe gpt-4o-audio-preview model adds support for audio inputs as prompts. This enhancement allows the model to detect nuances within audio recordings and add depth to generated user experiences. Audio outputs are currently not supported. Audio tokens are priced at $40 per million input audio tokens.",
+                  "openai/gpt-4o-mini": "OpenAI: GPT-4o-mini\nContext Length: 128000\nGPT-4o mini is OpenAI's newest model after [GPT-4 Omni](/models/openai/gpt-4o), supporting both text and image inputs with text outputs.\n\nAs their most advanced small model, it is many multiples more affordable than other recent frontier models, and more than 60% cheaper than [GPT-3.5 Turbo](/models/openai/gpt-3.5-turbo). It maintains SOTA intelligence, while being significantly more cost-effective.\n\nGPT-4o mini achieves an 82% score on MMLU and presently ranks higher than GPT-4 on chat preferences [common leaderboards](https://arena.lmsys.org/).\n\nCheck out the [launch announcement](https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/) to learn more.\n\n#multimodal",
+                  "openai/gpt-4o-mini-2024-07-18": "OpenAI: GPT-4o-mini (2024-07-18)\nContext Length: 128000\nGPT-4o mini is OpenAI's newest model after [GPT-4 Omni](/models/openai/gpt-4o), supporting both text and image inputs with text outputs.\n\nAs their most advanced small model, it is many multiples more affordable than other recent frontier models, and more than 60% cheaper than [GPT-3.5 Turbo](/models/openai/gpt-3.5-turbo). It maintains SOTA intelligence, while being significantly more cost-effective.\n\nGPT-4o mini achieves an 82% score on MMLU and presently ranks higher than GPT-4 on chat preferences [common leaderboards](https://arena.lmsys.org/).\n\nCheck out the [launch announcement](https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/) to learn more.\n\n#multimodal",
+                  "openai/gpt-4o-mini-search-preview": "OpenAI: GPT-4o-mini Search Preview\nContext Length: 128000\nGPT-4o mini Search Preview is a specialized model for web search in Chat Completions. It is trained to understand and execute web search queries.",
+                  "openai/gpt-4o-search-preview": "OpenAI: GPT-4o Search Preview\nContext Length: 128000\nGPT-4o Search Previewis a specialized model for web search in Chat Completions. It is trained to understand and execute web search queries.",
+                  "openai/gpt-4o:extended": "OpenAI: GPT-4o (extended)\nContext Length: 128000\nGPT-4o (\"o\" for \"omni\") is OpenAI's latest AI model, supporting both text and image inputs with text outputs. It maintains the intelligence level of [GPT-4 Turbo](/models/openai/gpt-4-turbo) while being twice as fast and 50% more cost-effective. GPT-4o also offers improved performance in processing non-English languages and enhanced visual capabilities.\n\nFor benchmarking against other models, it was briefly called [\"im-also-a-good-gpt2-chatbot\"](https://twitter.com/LiamFedus/status/1790064963966370209)\n\n#multimodal",
+                  "openai/gpt-5": "OpenAI: GPT-5\nContext Length: 400000\nGPT-5 is OpenAI’s most advanced model, offering major improvements in reasoning, code quality, and user experience. It is optimized for complex tasks that require step-by-step reasoning, instruction following, and accuracy in high-stakes use cases. It supports test-time routing features and advanced prompt understanding, including user-specified intent like \"think hard about this.\" Improvements include reductions in hallucination, sycophancy, and better performance in coding, writing, and health-related tasks.",
+                  "openai/gpt-5-chat": "OpenAI: GPT-5 Chat\nContext Length: 128000\nGPT-5 Chat is designed for advanced, natural, multimodal, and context-aware conversations for enterprise applications.",
+                  "openai/gpt-5-codex": "OpenAI: GPT-5 Codex\nContext Length: 400000\nGPT-5-Codex is a specialized version of GPT-5 optimized for software engineering and coding workflows. It is designed for both interactive development sessions and long, independent execution of complex engineering tasks. The model supports building projects from scratch, feature development, debugging, large-scale refactoring, and code review. Compared to GPT-5, Codex is more steerable, adheres closely to developer instructions, and produces cleaner, higher-quality code outputs. Reasoning effort can be adjusted with the `reasoning.effort` parameter. Read the [docs here](https://openrouter.ai/docs/use-cases/reasoning-tokens#reasoning-effort-level)\n\nCodex integrates into developer environments including the CLI, IDE extensions, GitHub, and cloud tasks. It adapts reasoning effort dynamically—providing fast responses for small tasks while sustaining extended multi-hour runs for large projects. The model is trained to perform structured code reviews, catching critical flaws by reasoning over dependencies and validating behavior against tests. It also supports multimodal inputs such as images or screenshots for UI development and integrates tool use for search, dependency installation, and environment setup. Codex is intended specifically for agentic coding applications.",
+                  "openai/gpt-5-image": "OpenAI: GPT-5 Image\nContext Length: 400000\n[GPT-5](https://openrouter.ai/openai/gpt-5) Image combines OpenAI's most advanced language model with state-of-the-art image generation capabilities. It offers major improvements in reasoning, code quality, and user experience while incorporating GPT Image 1's superior instruction following, text rendering, and detailed image editing.",
+                  "openai/gpt-5-image-mini": "OpenAI: GPT-5 Image Mini\nContext Length: 400000\nGPT-5 Image Mini combines OpenAI's advanced language capabilities, powered by [GPT-5 Mini](https://openrouter.ai/openai/gpt-5-mini), with GPT Image 1 Mini for efficient image generation. This natively multimodal model features superior instruction following, text rendering, and detailed image editing with reduced latency and cost. It excels at high-quality visual creation while maintaining strong text understanding, making it ideal for applications that require both efficient image generation and text processing at scale.",
+                  "openai/gpt-5-mini": "OpenAI: GPT-5 Mini\nContext Length: 400000\nGPT-5 Mini is a compact version of GPT-5, designed to handle lighter-weight reasoning tasks. It provides the same instruction-following and safety-tuning benefits as GPT-5, but with reduced latency and cost. GPT-5 Mini is the successor to OpenAI's o4-mini model.",
+                  "openai/gpt-5-nano": "OpenAI: GPT-5 Nano\nContext Length: 400000\nGPT-5-Nano is the smallest and fastest variant in the GPT-5 system, optimized for developer tools, rapid interactions, and ultra-low latency environments. While limited in reasoning depth compared to its larger counterparts, it retains key instruction-following and safety features. It is the successor to GPT-4.1-nano and offers a lightweight option for cost-sensitive or real-time applications.",
+                  "openai/gpt-5-pro": "OpenAI: GPT-5 Pro\nContext Length: 400000\nGPT-5 Pro is OpenAI’s most advanced model, offering major improvements in reasoning, code quality, and user experience. It is optimized for complex tasks that require step-by-step reasoning, instruction following, and accuracy in high-stakes use cases. It supports test-time routing features and advanced prompt understanding, including user-specified intent like \"think hard about this.\" Improvements include reductions in hallucination, sycophancy, and better performance in coding, writing, and health-related tasks.",
+                  "openai/gpt-5.1": "OpenAI: GPT-5.1\nContext Length: 400000\nGPT-5.1 is the latest frontier-grade model in the GPT-5 series, offering stronger general-purpose reasoning, improved instruction adherence, and a more natural conversational style compared to GPT-5. It uses adaptive reasoning to allocate computation dynamically, responding quickly to simple queries while spending more depth on complex tasks. The model produces clearer, more grounded explanations with reduced jargon, making it easier to follow even on technical or multi-step problems.\n\nBuilt for broad task coverage, GPT-5.1 delivers consistent gains across math, coding, and structured analysis workloads, with more coherent long-form answers and improved tool-use reliability. It also features refined conversational alignment, enabling warmer, more intuitive responses without compromising precision. GPT-5.1 serves as the primary full-capability successor to GPT-5",
+                  "openai/gpt-5.1-chat": "OpenAI: GPT-5.1 Chat\nContext Length: 128000\nGPT-5.1 Chat (AKA Instant is the fast, lightweight member of the 5.1 family, optimized for low-latency chat while retaining strong general intelligence. It uses adaptive reasoning to selectively “think” on harder queries, improving accuracy on math, coding, and multi-step tasks without slowing down typical conversations. The model is warmer and more conversational by default, with better instruction following and more stable short-form reasoning. GPT-5.1 Chat is designed for high-throughput, interactive workloads where responsiveness and consistency matter more than deep deliberation.\n",
+                  "openai/gpt-5.1-codex": "OpenAI: GPT-5.1-Codex\nContext Length: 400000\nGPT-5.1-Codex is a specialized version of GPT-5.1 optimized for software engineering and coding workflows. It is designed for both interactive development sessions and long, independent execution of complex engineering tasks. The model supports building projects from scratch, feature development, debugging, large-scale refactoring, and code review. Compared to GPT-5.1, Codex is more steerable, adheres closely to developer instructions, and produces cleaner, higher-quality code outputs. Reasoning effort can be adjusted with the `reasoning.effort` parameter. Read the [docs here](https://openrouter.ai/docs/use-cases/reasoning-tokens#reasoning-effort-level)\n\nCodex integrates into developer environments including the CLI, IDE extensions, GitHub, and cloud tasks. It adapts reasoning effort dynamically—providing fast responses for small tasks while sustaining extended multi-hour runs for large projects. The model is trained to perform structured code reviews, catching critical flaws by reasoning over dependencies and validating behavior against tests. It also supports multimodal inputs such as images or screenshots for UI development and integrates tool use for search, dependency installation, and environment setup. Codex is intended specifically for agentic coding applications.",
+                  "openai/gpt-5.1-codex-mini": "OpenAI: GPT-5.1-Codex-Mini\nContext Length: 400000\nGPT-5.1-Codex-Mini is a smaller and faster version of GPT-5.1-Codex",
+                  "openai/gpt-oss-120b": "OpenAI: gpt-oss-120b\nContext Length: 131072\ngpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B parameters per forward pass and is optimized to run on a single H100 GPU with native MXFP4 quantization. The model supports configurable reasoning depth, full chain-of-thought access, and native tool use, including function calling, browsing, and structured output generation.",
+                  "openai/gpt-oss-120b:exacto": "OpenAI: gpt-oss-120b (exacto)\nContext Length: 131072\ngpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B parameters per forward pass and is optimized to run on a single H100 GPU with native MXFP4 quantization. The model supports configurable reasoning depth, full chain-of-thought access, and native tool use, including function calling, browsing, and structured output generation.",
+                  "openai/gpt-oss-20b": "OpenAI: gpt-oss-20b\nContext Length: 131072\ngpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the Apache 2.0 license. It uses a Mixture-of-Experts (MoE) architecture with 3.6B active parameters per forward pass, optimized for lower-latency inference and deployability on consumer or single-GPU hardware. The model is trained in OpenAI’s Harmony response format and supports reasoning level configuration, fine-tuning, and agentic capabilities including function calling, tool use, and structured outputs.",
+                  "openai/gpt-oss-20b:free": "OpenAI: gpt-oss-20b (free)\nContext Length: 131072\ngpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the Apache 2.0 license. It uses a Mixture-of-Experts (MoE) architecture with 3.6B active parameters per forward pass, optimized for lower-latency inference and deployability on consumer or single-GPU hardware. The model is trained in OpenAI’s Harmony response format and supports reasoning level configuration, fine-tuning, and agentic capabilities including function calling, tool use, and structured outputs.",
+                  "openai/gpt-oss-safeguard-20b": "OpenAI: gpt-oss-safeguard-20b\nContext Length: 131072\ngpt-oss-safeguard-20b is a safety reasoning model from OpenAI built upon gpt-oss-20b. This open-weight, 21B-parameter Mixture-of-Experts (MoE) model offers lower latency for safety tasks like content classification, LLM filtering, and trust & safety labeling.\n\nLearn more about this model in OpenAI's gpt-oss-safeguard [user guide](https://cookbook.openai.com/articles/gpt-oss-safeguard-guide).",
+                  "openai/o1": "OpenAI: o1\nContext Length: 200000\nThe latest and strongest model family from OpenAI, o1 is designed to spend more time thinking before responding. The o1 model series is trained with large-scale reinforcement learning to reason using chain of thought. \n\nThe o1 models are optimized for math, science, programming, and other STEM-related tasks. They consistently exhibit PhD-level accuracy on benchmarks in physics, chemistry, and biology. Learn more in the [launch announcement](https://openai.com/o1).\n",
+                  "openai/o1-pro": "OpenAI: o1-pro\nContext Length: 200000\nThe o1 series of models are trained with reinforcement learning to think before they answer and perform complex reasoning. The o1-pro model uses more compute to think harder and provide consistently better answers.",
+                  "openai/o3": "OpenAI: o3\nContext Length: 200000\no3 is a well-rounded and powerful model across domains. It sets a new standard for math, science, coding, and visual reasoning tasks. It also excels at technical writing and instruction-following. Use it to think through multi-step problems that involve analysis across text, code, and images. ",
+                  "openai/o3-deep-research": "OpenAI: o3 Deep Research\nContext Length: 200000\no3-deep-research is OpenAI's advanced model for deep research, designed to tackle complex, multi-step research tasks.\n\nNote: This model always uses the 'web_search' tool which adds additional cost.",
+                  "openai/o3-mini": "OpenAI: o3 Mini\nContext Length: 200000\nOpenAI o3-mini is a cost-efficient language model optimized for STEM reasoning tasks, particularly excelling in science, mathematics, and coding.\n\nThis model supports the `reasoning_effort` parameter, which can be set to \"high\", \"medium\", or \"low\" to control the thinking time of the model. The default is \"medium\". OpenRouter also offers the model slug `openai/o3-mini-high` to default the parameter to \"high\".\n\nThe model features three adjustable reasoning effort levels and supports key developer capabilities including function calling, structured outputs, and streaming, though it does not include vision processing capabilities.\n\nThe model demonstrates significant improvements over its predecessor, with expert testers preferring its responses 56% of the time and noting a 39% reduction in major errors on complex questions. With medium reasoning effort settings, o3-mini matches the performance of the larger o1 model on challenging reasoning evaluations like AIME and GPQA, while maintaining lower latency and cost.",
+                  "openai/o3-mini-high": "OpenAI: o3 Mini High\nContext Length: 200000\nOpenAI o3-mini-high is the same model as [o3-mini](/openai/o3-mini) with reasoning_effort set to high. \n\no3-mini is a cost-efficient language model optimized for STEM reasoning tasks, particularly excelling in science, mathematics, and coding. The model features three adjustable reasoning effort levels and supports key developer capabilities including function calling, structured outputs, and streaming, though it does not include vision processing capabilities.\n\nThe model demonstrates significant improvements over its predecessor, with expert testers preferring its responses 56% of the time and noting a 39% reduction in major errors on complex questions. With medium reasoning effort settings, o3-mini matches the performance of the larger o1 model on challenging reasoning evaluations like AIME and GPQA, while maintaining lower latency and cost.",
+                  "openai/o3-pro": "OpenAI: o3 Pro\nContext Length: 200000\nThe o-series of models are trained with reinforcement learning to think before they answer and perform complex reasoning. The o3-pro model uses more compute to think harder and provide consistently better answers.\n\nNote that BYOK is required for this model. Set up here: https://openrouter.ai/settings/integrations",
+                  "openai/o4-mini": "OpenAI: o4 Mini\nContext Length: 200000\nOpenAI o4-mini is a compact reasoning model in the o-series, optimized for fast, cost-efficient performance while retaining strong multimodal and agentic capabilities. It supports tool use and demonstrates competitive reasoning and coding performance across benchmarks like AIME (99.5% with Python) and SWE-bench, outperforming its predecessor o3-mini and even approaching o3 in some domains.\n\nDespite its smaller size, o4-mini exhibits high accuracy in STEM tasks, visual problem solving (e.g., MathVista, MMMU), and code editing. It is especially well-suited for high-throughput scenarios where latency or cost is critical. Thanks to its efficient architecture and refined reinforcement learning training, o4-mini can chain tools, generate structured outputs, and solve multi-step tasks with minimal delay—often in under a minute.",
+                  "openai/o4-mini-deep-research": "OpenAI: o4 Mini Deep Research\nContext Length: 200000\no4-mini-deep-research is OpenAI's faster, more affordable deep research model—ideal for tackling complex, multi-step research tasks.\n\nNote: This model always uses the 'web_search' tool which adds additional cost.",
+                  "openai/o4-mini-high": "OpenAI: o4 Mini High\nContext Length: 200000\nOpenAI o4-mini-high is the same model as [o4-mini](/openai/o4-mini) with reasoning_effort set to high. \n\nOpenAI o4-mini is a compact reasoning model in the o-series, optimized for fast, cost-efficient performance while retaining strong multimodal and agentic capabilities. It supports tool use and demonstrates competitive reasoning and coding performance across benchmarks like AIME (99.5% with Python) and SWE-bench, outperforming its predecessor o3-mini and even approaching o3 in some domains.\n\nDespite its smaller size, o4-mini exhibits high accuracy in STEM tasks, visual problem solving (e.g., MathVista, MMMU), and code editing. It is especially well-suited for high-throughput scenarios where latency or cost is critical. Thanks to its efficient architecture and refined reinforcement learning training, o4-mini can chain tools, generate structured outputs, and solve multi-step tasks with minimal delay—often in under a minute."
+                },
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "openai/gpt-oss-safeguard-20b"
+              },
+              "provider": {
+                "_input_type": "DropdownInput",
+                "advanced": false,
+                "combobox": false,
+                "dialog_inputs": {},
+                "display_name": "Provider",
+                "dynamic": false,
+                "external_options": {},
+                "info": "The AI model provider",
+                "name": "provider",
+                "options": [
+                  "Agentica-Org",
+                  "Ai21",
+                  "Aion-Labs",
+                  "Alfredpros",
+                  "Alibaba",
+                  "Allenai",
+                  "Alpindale",
+                  "Amazon",
+                  "Anthracite-Org",
+                  "Anthropic",
+                  "Arcee-Ai",
+                  "Arliai",
+                  "Baidu",
+                  "Bytedance",
+                  "Cognitivecomputations",
+                  "Cohere",
+                  "Deepcogito",
+                  "Deepseek",
+                  "Eleutherai",
+                  "Google",
+                  "Gryphe",
+                  "Ibm-Granite",
+                  "Inception",
+                  "Inclusionai",
+                  "Inflection",
+                  "Kwaipilot",
+                  "Liquid",
+                  "Mancer",
+                  "Meituan",
+                  "Meta-Llama",
+                  "Microsoft",
+                  "Minimax",
+                  "Mistralai",
+                  "Moonshotai",
+                  "Morph",
+                  "Neversleep",
+                  "Nousresearch",
+                  "Nvidia",
+                  "Openai",
+                  "Opengvlab",
+                  "Openrouter",
+                  "Perplexity",
+                  "Qwen",
+                  "Raifle",
+                  "Relace",
+                  "Sao10K",
+                  "Stepfun-Ai",
+                  "Switchpoint",
+                  "Tencent",
+                  "Thedrummer",
+                  "Thudm",
+                  "Tngtech",
+                  "Undi95",
+                  "X-Ai",
+                  "Z-Ai"
+                ],
+                "options_metadata": [],
+                "placeholder": "",
+                "real_time_refresh": true,
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "Openai"
+              },
+              "site_url": {
+                "_input_type": "StrInput",
+                "advanced": true,
+                "display_name": "Site URL",
+                "dynamic": false,
+                "info": "Your site URL for OpenRouter rankings",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "site_url",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "stream": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "Stream",
+                "dynamic": false,
+                "info": "Stream the response from the model. Streaming works only in Chat.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "stream",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": false
+              },
+              "system_message": {
+                "_input_type": "MultilineInput",
+                "advanced": false,
+                "copy_field": false,
+                "display_name": "System Message",
+                "dynamic": false,
+                "info": "System message to pass to the model.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "system_message",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "You are ScamShield AI, India's #1 job scam detection expert.  Analyze this job posting using Indian market context:  **Provide JSON output ONLY:** {   \"llm_score\": <0-100>,   \"top_reasons\": [     \"reason 1\",     \"reason 2\",     \"reason 3\",     \"reason 4\"   ],   \"explain_brief\": \"1-2 sentence explanation\",   \"scam_type\": \"<work-from-home|investment|identity-theft|fake-company|pyramid|unclear>\" }  **Scoring Guide:** - 0-25: Legitimate (LinkedIn verified, proper company, realistic salary) - 26-60: Suspicious (vague details, generic email, mild red flags) - 61-100: High-risk scam (upfront fees, WhatsApp-only, unrealistic promises)  **India-Specific Red Flags:** - Telegram/WhatsApp recruitment - Registration/processing fees - Unrealistic salaries (>₹5,000/day or >₹50L/year for entry-level) - \"Ghar baithe kamao\" language - No company registration details - Payment in gift cards/crypto  **Be concise. Focus on concrete red flags.**"
+              },
+              "temperature": {
+                "_input_type": "SliderInput",
+                "advanced": true,
+                "display_name": "Temperature",
+                "dynamic": false,
+                "info": "Controls randomness. Lower values are more deterministic, higher values are more creative.",
+                "max_label": "",
+                "max_label_icon": "",
+                "min_label": "",
+                "min_label_icon": "",
+                "name": "temperature",
+                "placeholder": "",
+                "range_spec": {
+                  "max": 2,
+                  "min": 0,
+                  "step": 0.01,
+                  "step_type": "float"
+                },
+                "required": false,
+                "show": true,
+                "slider_buttons": false,
+                "slider_buttons_options": [],
+                "slider_input": false,
+                "title_case": false,
+                "tool_mode": false,
+                "type": "slider",
+                "value": 0.7
+              }
+            },
+            "tool_mode": false
+          },
+          "selected_output": "text_output",
+          "showNode": true,
+          "type": "OpenRouterComponent"
+        },
+        "dragging": false,
+        "id": "OpenRouterComponent-o4xaY",
+        "measured": {
+          "height": 565,
+          "width": 320
+        },
+        "position": {
+          "x": 364.96816350287514,
+          "y": 869.4726590631642
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "ChatInput-8GrZ9",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Get chat inputs from the Playground.",
+            "display_name": "Chat Input",
+            "documentation": "https://docs.langflow.org/components-io#chat-input",
+            "edited": false,
+            "field_order": [
+              "input_value",
+              "should_store_message",
+              "sender",
+              "sender_name",
+              "session_id",
+              "files"
+            ],
+            "frozen": false,
+            "icon": "MessagesSquare",
+            "legacy": false,
+            "lf_version": "1.6.7",
+            "metadata": {},
+            "minimized": true,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Chat Message",
+                "group_outputs": false,
+                "method": "message_response",
+                "name": "message",
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.base.data.utils import IMG_FILE_TYPES, TEXT_FILE_TYPES\nfrom langflow.base.io.chat import ChatComponent\nfrom langflow.inputs.inputs import BoolInput\nfrom langflow.io import (\n    DropdownInput,\n    FileInput,\n    MessageTextInput,\n    MultilineInput,\n    Output,\n)\nfrom langflow.schema.message import Message\nfrom langflow.utils.constants import (\n    MESSAGE_SENDER_AI,\n    MESSAGE_SENDER_NAME_USER,\n    MESSAGE_SENDER_USER,\n)\n\n\nclass ChatInput(ChatComponent):\n    display_name = \"Chat Input\"\n    description = \"Get chat inputs from the Playground.\"\n    documentation: str = \"https://docs.langflow.org/components-io#chat-input\"\n    icon = \"MessagesSquare\"\n    name = \"ChatInput\"\n    minimized = True\n\n    inputs = [\n        MultilineInput(\n            name=\"input_value\",\n            display_name=\"Input Text\",\n            value=\"\",\n            info=\"Message to be passed as input.\",\n            input_types=[],\n        ),\n        BoolInput(\n            name=\"should_store_message\",\n            display_name=\"Store Messages\",\n            info=\"Store the message in the history.\",\n            value=True,\n            advanced=True,\n        ),\n        DropdownInput(\n            name=\"sender\",\n            display_name=\"Sender Type\",\n            options=[MESSAGE_SENDER_AI, MESSAGE_SENDER_USER],\n            value=MESSAGE_SENDER_USER,\n            info=\"Type of sender.\",\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"sender_name\",\n            display_name=\"Sender Name\",\n            info=\"Name of the sender.\",\n            value=MESSAGE_SENDER_NAME_USER,\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"session_id\",\n            display_name=\"Session ID\",\n            info=\"The session ID of the chat. If empty, the current session ID parameter will be used.\",\n            advanced=True,\n        ),\n        FileInput(\n            name=\"files\",\n            display_name=\"Files\",\n            file_types=TEXT_FILE_TYPES + IMG_FILE_TYPES,\n            info=\"Files to be sent with the message.\",\n            advanced=True,\n            is_list=True,\n            temp_file=True,\n        ),\n    ]\n    outputs = [\n        Output(display_name=\"Chat Message\", name=\"message\", method=\"message_response\"),\n    ]\n\n    async def message_response(self) -> Message:\n        # Ensure files is a list and filter out empty/None values\n        files = self.files if self.files else []\n        if files and not isinstance(files, list):\n            files = [files]\n        files = [f for f in files if f is not None and f != \"\"]\n\n        message = await Message.create(\n            text=self.input_value,\n            sender=self.sender,\n            sender_name=self.sender_name,\n            session_id=self.session_id,\n            files=files,\n        )\n        if self.session_id and isinstance(message, Message) and self.should_store_message:\n            stored_message = await self.send_message(\n                message,\n            )\n            self.message.value = stored_message\n            message = stored_message\n\n        self.status = message\n        return message\n"
+              },
+              "files": {
+                "_input_type": "FileInput",
+                "advanced": true,
+                "display_name": "Files",
+                "dynamic": false,
+                "fileTypes": [
+                  "csv",
+                  "json",
+                  "pdf",
+                  "txt",
+                  "md",
+                  "mdx",
+                  "yaml",
+                  "yml",
+                  "xml",
+                  "html",
+                  "htm",
+                  "docx",
+                  "py",
+                  "sh",
+                  "sql",
+                  "js",
+                  "ts",
+                  "tsx",
+                  "jpg",
+                  "jpeg",
+                  "png",
+                  "bmp",
+                  "image"
+                ],
+                "file_path": "",
+                "info": "Files to be sent with the message.",
+                "list": true,
+                "list_add_label": "Add More",
+                "name": "files",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "temp_file": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "file",
+                "value": ""
+              },
+              "input_value": {
+                "_input_type": "MultilineInput",
+                "advanced": false,
+                "copy_field": false,
+                "display_name": "Input Text",
+                "dynamic": false,
+                "info": "Message to be passed as input.",
+                "input_types": [],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "input_value",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "sender": {
+                "_input_type": "DropdownInput",
+                "advanced": true,
+                "combobox": false,
+                "dialog_inputs": {},
+                "display_name": "Sender Type",
+                "dynamic": false,
+                "external_options": {},
+                "info": "Type of sender.",
+                "name": "sender",
+                "options": [
+                  "Machine",
+                  "User"
+                ],
+                "options_metadata": [],
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "User"
+              },
+              "sender_name": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Sender Name",
+                "dynamic": false,
+                "info": "Name of the sender.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "sender_name",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "User"
+              },
+              "session_id": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Session ID",
+                "dynamic": false,
+                "info": "The session ID of the chat. If empty, the current session ID parameter will be used.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "session_id",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "should_store_message": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "Store Messages",
+                "dynamic": false,
+                "info": "Store the message in the history.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "should_store_message",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": true
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": false,
+          "type": "ChatInput"
+        },
+        "dragging": false,
+        "id": "ChatInput-8GrZ9",
+        "measured": {
+          "height": 48,
+          "width": 192
+        },
+        "position": {
+          "x": -574.9142687503218,
+          "y": 572.074886276353
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "CustomComponent-AQwn4",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Formats ScamShield JSON output into professional, readable text",
+            "display_name": "Result Formatter",
+            "documentation": "",
+            "edited": true,
+            "field_order": [
+              "json_input"
+            ],
+            "frozen": false,
+            "legacy": false,
+            "lf_version": "1.6.7",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Formatted Output",
+                "group_outputs": false,
+                "hidden": null,
+                "method": "format_result",
+                "name": "output",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.custom import Component\r\nfrom langflow.io import MessageTextInput, Output\r\nfrom langflow.schema.message import Message\r\nimport json\r\n\r\n\r\nclass ResultFormatter(Component):\r\n    display_name = \"Result Formatter\"\r\n    description = \"Formats ScamShield JSON output into professional, readable text\"\r\n    \r\n    inputs = [\r\n        MessageTextInput(\r\n            name=\"json_input\",\r\n            display_name=\"JSON Input\",\r\n            info=\"Raw JSON output from Score Combiner\"\r\n        )\r\n    ]\r\n    \r\n    outputs = [\r\n        Output(display_name=\"Formatted Output\", name=\"output\", method=\"format_result\")\r\n    ]\r\n    \r\n    def format_result(self) -> Message:\r\n        try:\r\n            # Parse JSON input\r\n            data = json.loads(self.json_input)\r\n            \r\n            # Extract data\r\n            score = round(data.get('final_score', 0))\r\n            verdict = data.get('final_verdict', 'UNKNOWN')\r\n            color = data.get('color', 'green')\r\n            risk_level = data.get('risk_level', 'Unknown Risk')\r\n            explanation = data.get('explain_brief', 'No explanation provided')\r\n            \r\n            # Score breakdown\r\n            breakdown = data.get('breakdown', {})\r\n            heuristic = breakdown.get('heuristic', 0)\r\n            domain = breakdown.get('domain', 0)\r\n            llm = breakdown.get('llm', 0)\r\n            \r\n            # Flags and recommendations\r\n            heuristic_flags = data.get('heuristic_flags', [])\r\n            top_reasons = data.get('top_reasons', [])\r\n            next_steps = data.get('next_steps', [])\r\n            \r\n            # Combine unique flags\r\n            all_flags = list(set(heuristic_flags + top_reasons))\r\n            \r\n            # Status indicators\r\n            status_icon = {\r\n                'green': '✓',\r\n                'yellow': '⚠',\r\n                'red': '✕'\r\n            }.get(color, '•')\r\n            \r\n            # Progress bar\r\n            bar_length = 20\r\n            filled = int((score / 100) * bar_length)\r\n            bar = '█' * filled + '░' * (bar_length - filled)\r\n            \r\n            # ═══════════════════════════════════════════\r\n            # BUILD OUTPUT - FORCE LINE BREAKS\r\n            # ═══════════════════════════════════════════\r\n            \r\n            output = \"**SCAMSHIELD ANALYSIS REPORT**\"\r\n            output += \"\\n\\n\"\r\n            \r\n            output += f\"**Status:** {status_icon} {verdict.upper()}\"\r\n            output += \"\\n\\n\"\r\n            \r\n            output += f\"**Risk Level:** {risk_level}\"\r\n            output += \"\\n\\n\"\r\n            \r\n            output += f\"**Risk Score:** {score}/100\"\r\n            output += \"\\n\\n\"\r\n            \r\n            output += f\"[{bar}]\"\r\n            output += \"\\n\\n\"\r\n\r\n            # Confidence (if available)\r\n            if 'confidence' in data:\r\n                confidence = data['confidence']\r\n                output += f\"**Analysis Confidence:** {confidence}\"\r\n                output += \"\\n\\n\"\r\n\r\n            output += \"─\" * 50\r\n            output += \"\\n\\n\"\r\n            \r\n            # Assessment\r\n            output += \"**ASSESSMENT**\"\r\n            output += \"\\n\\n\"\r\n            \r\n            output += f\"{explanation}\"\r\n            output += \"\\n\\n\"\r\n            \r\n            output += \"─\" * 50\r\n            output += \"\\n\\n\"\r\n            \r\n            # Key Findings\r\n            output += \"**KEY FINDINGS**\"\r\n            output += \"\\n\\n\"\r\n            \r\n            if all_flags:\r\n                for i, flag in enumerate(all_flags[:6], 1):\r\n                    clean_flag = flag.replace('🚨', '').replace('⚠️', '').replace('✅', '').strip()\r\n                    output += f\"{i}. {clean_flag}\"\r\n                    output += \"\\n\"\r\n                output += \"\\n\"\r\n            else:\r\n                output += \"No significant risk indicators detected.\"\r\n                output += \"\\n\\n\"\r\n            \r\n            output += \"─\" * 50\r\n            output += \"\\n\\n\"\r\n            \r\n            # Recommendations\r\n            output += \"**RECOMMENDATIONS**\"\r\n            output += \"\\n\\n\"\r\n            \r\n            if next_steps:\r\n                for i, step in enumerate(next_steps[:4], 1):\r\n                    clean_step = step.replace('✅', '').replace('⚠️', '').replace('🚨', '').strip()\r\n                    output += f\"{i}. {clean_step}\"\r\n                    output += \"\\n\"\r\n                output += \"\\n\"\r\n            else:\r\n                output += \"Proceed with standard verification.\"\r\n                output += \"\\n\\n\"\r\n            \r\n            output += \"─\" * 50\r\n            output += \"\\n\\n\"\r\n            \r\n            # Analysis Breakdown\r\n            output += \"**ANALYSIS BREAKDOWN**\"\r\n            output += \"\\n\\n\"\r\n            \r\n            output += f\"**Pattern Recognition:** {heuristic}/100\"\r\n            output += \"\\n\\n\"\r\n            \r\n            output += f\"**Domain Validation:** {domain}/100\"\r\n            output += \"\\n\\n\"\r\n            \r\n            output += f\"**AI Contextual Analysis:** {llm}/100\"\r\n            output += \"\\n\\n\"\r\n\r\n            # Weights (if available)\r\n            if 'weights_used' in data:\r\n                weights = data['weights_used']\r\n                output += \"**Weighting Applied:**\"\r\n                output += \"\\n\\n\"\r\n                \r\n                output += f\"• Pattern: {int(weights['h']*100)}%\"\r\n                output += \"\\n\\n\"\r\n                \r\n                output += f\"• Domain: {int(weights['d']*100)}%\"\r\n                output += \"\\n\\n\"\r\n                \r\n                output += f\"• AI: {int(weights['l']*100)}%\"\r\n                output += \"\\n\\n\"\r\n\r\n            output += \"─\" * 50\r\n            output += \"\\n\\n\"\r\n            \r\n            output += \"Note: Analysis is ephemeral. No data is stored or tracked.\"\r\n            \r\n            return Message(text=output.strip())\r\n            \r\n        except json.JSONDecodeError:\r\n            return Message(text=\"ERROR: Invalid data format. Please try again.\")\r\n        \r\n        except Exception as e:\r\n            return Message(text=f\"ERROR: Analysis failed. {str(e)}\")\r\n"
+              },
+              "json_input": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "JSON Input",
+                "dynamic": false,
+                "info": "Raw JSON output from Score Combiner",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "json_input",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "ResultFormatter"
+        },
+        "dragging": false,
+        "id": "CustomComponent-AQwn4",
+        "measured": {
+          "height": 219,
+          "width": 320
+        },
+        "position": {
+          "x": 1710.8401972646898,
+          "y": 507.0414414817552
+        },
+        "selected": false,
+        "type": "genericNode"
+      }
+    ],
+    "viewport": {
+      "x": -1121.8910625224462,
+      "y": -393.3301102316359,
+      "zoom": 0.9441624573695718
+    }
+  },
+  "description": "Harness the Power of Conversational AI.",
+  "endpoint_name": null,
+  "id": "1a6f2c46-dc0e-4fa0-9592-699118ab1673",
+  "is_component": false,
+  "last_tested_version": "1.6.7",
+  "name": "ScamShield",
+  "tags": []
+}
