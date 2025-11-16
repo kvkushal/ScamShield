@@ -20,6 +20,9 @@
 
 https://github.com/user-attachments/assets/7b9feaad-62ba-493e-8b92-3c5949e58132
 
+**Langflow Pipeline Architecture**
+
+<img width="1842" height="781" alt="Langflow Pipeline Architecture" src="https://github.com/user-attachments/assets/956fbe27-a6ab-4803-8e28-8bac6c0433e0" />
 
 ---
 
@@ -265,23 +268,6 @@ else:
 | **0-25** | ✅ SAFE | 🟢 Green | Proceed with standard verification |
 | **26-60** | ⚠️ SUSPICIOUS | 🟡 Yellow | Be cautious before responding |
 | **61-100** | 🚨 SCAM | 🔴 Red | Avoid engagement and report it |
-
----
-
-## 📁 Project Structure
-
-```
-scamshield/
-├── index.html
-├── README.md
-├── LICENSE
-└── langflow/
-    ├── heuristic_scorer.py
-    ├── domain_validator.py
-    ├── score_combiner.py
-    ├── result_formatter.py
-    └── flow_export.json
-```
 
 ---
 
