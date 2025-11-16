@@ -6,13 +6,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Langflow](https://img.shields.io/badge/Built%20with-Langflow-6366F1?style=flat&logo=python)](https://langflow.org)
 [![GenAI](https://img.shields.io/badge/Powered%20by-GenAI-14B8A6?style=flat&logo=openai)](https://groq.com)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
 **Protecting 3.2M+ Indian job seekers from ₹10,000 Cr annual scam losses**
 
-🏆 **4th Place Winner** - GenAI Hackathon 2025
-
-[Demo](#-demo) • [Features](#-features) • [Tech Stack](#-tech-stack) • [Quick Start](#-quick-start) • [Team](#-team)
 
 </div>
 
@@ -22,9 +18,8 @@
 
 **Watch ScamShield in Action:**
 
-https://github.com/yourusername/scamshield/assets/demo.mp4
+https://github.com/user-attachments/assets/7b9feaad-62ba-493e-8b92-3c5949e58132
 
-> Upload your demo video as `screenshots/demo.mp4`
 
 ---
 
@@ -74,7 +69,7 @@ Verifies authenticity
 <td width="33%" align="center">
 
 #### 🤖 GenAI Analysis
-Powered by **Llama 3.1 70B**
+Powered by **OpenAI GPT-5.1**
 - Emotion manipulation detection  
 - Scam type classification  
 - Contextual reasoning  
@@ -132,7 +127,7 @@ Powered by **Llama 3.1 70B**
 **Hybrid Pipeline**
 - Frontend: HTML/CSS/JS  
 - Backend: Langflow  
-- AI Engine: Groq + Llama 3.1 70B  
+- AI Engine: OpenRouter + OpenAI GPT-5.1  
 - Deploy: Ngrok  
 
 ---
@@ -167,7 +162,7 @@ Modern browser
 
 **1. Clone repository**
 ```
-git clone https://github.com/yourusername/scamshield.git
+git clone https://github.com/kvkushal/scamshield.git
 cd scamshield
 ```
 
@@ -198,44 +193,78 @@ python -m http.server 8000
 
 ---
 
-## 🧪 Test Cases
 
-### 🚨 Obvious Scam (Score: 85-90)
-```
-URGENT HIRING! Earn ₹50,000 DAILY...
-Telegram: @QuickCashJobs
-Registration fee: ₹500...
-```
+## 📊 How It Works
 
-### ✅ Legitimate Job (Score: 8-15)
-```
-Software Engineer – Zomato
-LinkedIn job link...
+### Dynamic Scoring Algorithm
+
+ScamShield uses intelligent dynamic weighting that adapts based on the severity of detected patterns.
+
+**Base weights (30-30-40 split)**  
+```python
+weights = {'heuristic': 0.30, 'domain': 0.30, 'llm': 0.40}
 ```
 
-### ⚠️ Grey Area (Score: 45-60)
+**Dynamic adjustment based on critical flags**
+```python
+if critical_flags >= 2:
+    # Obvious scam patterns detected - trust heuristics more
+    weights = {'heuristic': 0.50, 'domain': 0.25, 'llm': 0.25}
+
+elif domain_score > 70:
+    # Domain issues dominate - trust domain validator more
+    weights = {'heuristic': 0.25, 'domain': 0.50, 'llm': 0.25}
+
+else:
+    # Normal case - trust LLM contextual analysis more
+    weights = {'heuristic': 0.30, 'domain': 0.30, 'llm': 0.40}
 ```
-Part-time content writing...
-WhatsApp contact...
+
+**Calculate final score**
+```python
+final_score = (
+    heuristic_score * weights['heuristic'] +
+    domain_score * weights['domain'] +
+    llm_score * weights['llm']
+)
 ```
 
 ---
 
-## 📊 How It Works
+### Why Dynamic Weighting?
 
-### Scoring
+| Scenario | Weight Adjustment | Reason |
+|----------|------------------|--------|
+| **Critical flags detected** (e.g., upfront fee, “send money”) | Heuristic: 50%, Domain: 25%, LLM: 25% | Rule-based patterns are most reliable for obvious scams |
+| **Domain issues dominate** (e.g., Gmail recruitment, suspicious URLs) | Heuristic: 25%, Domain: 50%, LLM: 25% | Platform legitimacy becomes the strongest indicator |
+| **Normal analysis** (mixed or subtle signals) | Heuristic: 30%, Domain: 30%, LLM: 40% | LLM contextual understanding gives the best judgment |
 
+---
+
+### Confidence Calculation
+
+Measure agreement between analyzers:
+
+```python
+score_variance = max(scores) - min(scores)
+
+if score_variance < 20:
+    confidence = "High"     # All analyzers agree
+elif score_variance < 40:
+    confidence = "Medium"   # Some disagreement
+else:
+    confidence = "Low"      # Strong disagreement
 ```
-final_score = heuristic*0.30 + domain*0.30 + llm*0.40
-```
 
-### Risk Levels
+---
 
-| Score | Verdict | Color |
-|-------|---------|--------|
-| 0-25 | Safe | Green |
-| 26-60 | Suspicious | Yellow |
-| 61-100 | Scam | Red |
+### Risk Categories
+
+| Score Range | Verdict | Color | Action |
+|-------------|---------|-------|--------|
+| **0-25** | ✅ SAFE | 🟢 Green | Proceed with standard verification |
+| **26-60** | ⚠️ SUSPICIOUS | 🟡 Yellow | Be cautious before responding |
+| **61-100** | 🚨 SCAM | 🔴 Red | Avoid engagement and report it |
 
 ---
 
@@ -246,9 +275,6 @@ scamshield/
 ├── index.html
 ├── README.md
 ├── LICENSE
-├── screenshots/
-│   ├── demo.mp4
-│   └── demo.png
 └── langflow/
     ├── heuristic_scorer.py
     ├── domain_validator.py
@@ -275,7 +301,7 @@ scamshield/
 - WhatsApp/Telegram detection  
 
 ### LLM Analyzer
-- Llama 3.1 70B  
+- OpenAI GPT-5.1  
 - Emotional manipulation  
 - Scam type detection  
 
@@ -295,28 +321,6 @@ scamshield/
 
 ---
 
-## 🛣️ Roadmap
-
-### Q1 2026
-- Browser extension  
-- WhatsApp bot  
-- Android app  
-- Multi-language  
-
-### Q2 2026
-- Company verification  
-- Reporting system  
-- Email plugin  
-- Public API  
-
-### Q3 2026
-- ML model  
-- Government partnership  
-- Enterprise version  
-- Blockchain registry  
-
----
-
 ## 📈 Performance
 
 | Metric | Value |
@@ -328,94 +332,10 @@ scamshield/
 
 ---
 
-## 🤝 Contributing
-
-1. Fork  
-2. Create branch  
-3. Commit  
-4. Push  
-5. Open PR  
-
----
-
 ## 📄 License
 
 MIT License. See `LICENSE`.
 
 ---
-
-## 👥 Team
-
-<table align="center">
-<tr>
-<td align="center">
-<a href="https://github.com/yourusername">
-<img src="https://github.com/yourusername.png" width="100px;">
-<br><b>Your Name</b></a>
-<br>Project Lead
-</td>
-
-<td align="center">
-<a href="https://github.com/teammate1">
-<img src="https://github.com/teammate1.png" width="100px;">
-<br><b>Teammate 1</b></a>
-<br>Developer
-</td>
-
-<td align="center">
-<a href="https://github.com/teammate2">
-<img src="https://github.com/teammate2.png" width="100px;">
-<br><b>Teammate 2</b></a>
-<br>Developer
-</td>
-
-<td align="center">
-<a href="https://github.com/teammate3">
-<img src="https://github.com/teammate3.png" width="100px;">
-<br><b>Teammate 3</b></a>
-<br>AI Engineer
-</td>
-
-<td align="center">
-<a href="https://github.com/teammate4">
-<img src="https://github.com/teammate4.png" width="100px;">
-<br><b>Teammate 4</b></a>
-<br>Designer
-</td>
-</tr>
-</table>
-
----
-
-## 🙏 Acknowledgments
-
-- Langflow  
-- Groq  
-- Indian Cyber Crime Portal  
-- GenAI Hackathon 2025  
-
----
-
-## 📞 Support
-
-<div align="center">
-
-[![Email](https://img.shields.io/badge/Email-your.email@example.com-EA4335?style=for-the-badge&logo=gmail)](mailto:your.email@example.com)  
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/yourprofile)  
-[![GitHub Issues](https://img.shields.io/badge/Issues-Report_Bug-181717?style=for-the-badge&logo=github)](https://github.com/yourusername/scamshield/issues)
-
-</div>
-
----
-
-<div align="center">
-
-### Made with ❤️ for protecting Indian job seekers  
-**ScamShield** | Empowering Safe Job Searches Across India
-
-![GitHub stars](https://img.shields.io/github/stars/yourusername/scamshield?style=social)
-![GitHub forks](https://img.shields.io/github/forks/yourusername/scamshield?style=social)
-
-[⬆ Back to Top](#-scamshield)
 
 </div>
